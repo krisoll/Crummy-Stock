@@ -7,6 +7,10 @@
 .externalNativeBuild
 .cxx
 
+# Release artifacts are attached to a GitHub Release, not committed. A 17 MB
+# binary in git history can never be removed without rewriting it.
+/releases
+
 # ---------------------------------------------------------------------------
 # Gradle / Kotlin
 # ---------------------------------------------------------------------------
