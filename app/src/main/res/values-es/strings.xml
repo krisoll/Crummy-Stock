@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="es">
+
+    <!-- Bottom navigation destinations -->
+    <string name="nav_inventory">Inventario</string>
+    <string name="nav_scan">Escanear</string>
+    <string name="nav_sales">Ventas</string>
+    <string name="nav_history">Historial</string>
+    <string name="nav_supplies">Insumos</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <!-- Common actions -->
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_save">Guardar</string>
+    <string name="action_back">Atrás</string>
+    <string name="action_scan">Escanear</string>
+    <string name="action_reset">Restablecer</string>
+
+    <!-- Inventory screen -->
+    <string name="inventory_add_product">Añadir producto</string>
+    <string name="inventory_search_placeholder">Buscar por nombre o código</string>
+    <string name="inventory_filter_all">Todos (%1$d)</string>
+    <string name="inventory_filter_low">Bajo</string>
+    <string name="inventory_filter_out">Agotado</string>
+    <string name="inventory_summary_items">Artículos</string>
+    <string name="inventory_summary_units">Unidades</string>
+    <string name="inventory_summary_value">Valor</string>
+    <string name="inventory_quantity">Cant. %1$d</string>
+    <string name="inventory_quick_add_one">+1</string>
+    <string name="inventory_quick_remove_one">-1</string>
+    <string name="inventory_empty_title">Todavía no hay productos</string>
+    <string name="inventory_empty_body">Toca «Añadir producto» para registrar tu primer artículo.</string>
+    <string name="inventory_no_matches_title">Ningún producto coincide con los filtros</string>
+    <string name="inventory_no_matches_body">Prueba a borrar la búsqueda o a elegir otro filtro.</string>
+
+    <!-- Product editor -->
+    <string name="product_edit_title">Editar producto</string>
+    <string name="product_new_title">Nuevo producto</string>
+    <string name="product_barcode_label">Código de barras / valor QR</string>
+    <string name="product_barcode_locked">El código de barras de un producto existente no se puede cambiar</string>
+    <string name="product_name_label">Nombre del producto</string>
+    <string name="product_price_label">Precio unitario</string>
+    <string name="product_price_stored">Se guardará como %1$s</string>
+    <string name="product_price_hint">Introduce un precio, por ejemplo 12,99</string>
+    <string name="product_quantity_edit_label">Cantidad en existencias</string>
+    <string name="product_quantity_new_label">Cantidad inicial</string>
+    <string name="product_export_qr">  Exportar imagen de código QR</string>
+    <string name="product_qr_help">Guarda una imagen PNG imprimible solo con el código QR en tu carpeta de exportación.</string>
+    <string name="product_scanner_help">En Android el escáner también reconoce etiquetas EAN/UPC, así que los códigos de barras de producto normales funcionan igual que los códigos QR.</string>
+    <string name="product_delete_dialog_title">¿Eliminar el producto?</string>
+    <string name="product_delete_dialog_body">Se eliminarán %1$s y su historial de ventas.</string>
+
+    <!-- Foto del producto -->
+    <string name="product_image_label">Foto</string>
+    <string name="product_image_choose">Añadir foto</string>
+    <string name="product_image_change">Cambiar foto</string>
+    <string name="product_image_remove">Quitar foto</string>
+    <string name="product_image_help">Elige una foto de tu galería o hazla con la cámara. Se guarda dentro de la app.</string>
+    <string name="product_image_failed">No se pudo usar esa foto</string>
+    <string name="product_image_source_title">Añadir foto</string>
+    <string name="product_image_source_camera">Hacer una foto</string>
+    <string name="product_image_source_gallery">Elegir de la galería</string>
+    <string name="photo_capture_hint">Pulsa el botón para hacer la foto</string>
+    <string name="photo_capture_failed">No se pudo hacer la foto</string>
+    <string name="photo_capture_permission_rationale">Hace falta acceso a la cámara para hacer la foto del producto.</string>
+
+    <!-- Scanner -->
+    <string name="scan_mode_sell">Vender</string>
+    <string name="scan_mode_add_stock">Añadir existencias</string>
+    <string name="scan_hint_sell">Apunta la cámara al código QR del producto para vender una unidad</string>
+    <string name="scan_hint_stock_in">Escanea un producto para devolver una unidad a las existencias</string>
+    <string name="scanner_permission_rationale">Se necesita acceso a la cámara para escanear los códigos QR de los productos.</string>
+    <string name="scanner_grant_camera_access">Permitir acceso a la cámara</string>
+
+    <!-- Sales history -->
+    <string name="sales_total">Total de ventas</string>
+    <plurals name="sales_units">
+        <item quantity="one">%d unidad</item>
+        <item quantity="many">%d de unidades</item>
+        <item quantity="other">%d unidades</item>
+    </plurals>
+    <plurals name="sales_transactions">
+        <item quantity="one">%d operación</item>
+        <item quantity="many">%d de operaciones</item>
+        <item quantity="other">%d operaciones</item>
+    </plurals>
+    <plurals name="sales_active_days">
+        <item quantity="one">%d día con ventas</item>
+        <item quantity="many">%d de días con ventas</item>
+        <item quantity="other">%d días con ventas</item>
+    </plurals>
+    <string name="sales_empty_title">Todavía no hay ventas</string>
+    <string name="sales_empty_body">Escanea el código QR de un producto para registrar tu primera venta.</string>
+    <string name="sales_day_summary">%1$d ventas \u00B7 %2$d unidades</string>
+    <string name="sales_export_day">Exportar %1$s</string>
+    <string name="sales_collapse">Contraer</string>
+    <string name="sales_expand">Expandir</string>
+    <string name="sales_quantity_times_price">%1$d \u00D7 %2$s</string>
+    <string name="sales_cancel_of">Anular la venta de %1$s</string>
+    <string name="sales_cancel_dialog_title">¿Anular esta venta?</string>
+    <string name="sales_cancel_dialog_body">%1$d \u00D7 %2$s (%3$s) se eliminará del registro de ventas y las unidades volverán al inventario.</string>
+    <string name="sales_cancel_confirm">Anular venta</string>
+    <string name="sales_cancel_order_body">Se quitarán del historial %1$d artículo(s) por un total de %2$s y el stock volverá al inventario.</string>
+    <string name="sales_cancel_keep">Mantener</string>
+
+    <!-- Day labels -->
+    <string name="day_today">Hoy</string>
+    <string name="day_yesterday">Ayer</string>
+    <string name="date_short">%1$s</string>
+
+    <!-- Settings -->
+    <string name="settings_export_location">Ubicación de exportación</string>
+    <string name="settings_export_location_description">Dónde se guardan los archivos CSV y las imágenes de etiquetas QR.</string>
+    <string name="settings_export_folder_selected">Los archivos se guardan en la carpeta que has elegido</string>
+    <string name="settings_export_folder_default">Usando la carpeta %1$s del dispositivo</string>
+    <string name="settings_choose_folder">Elegir carpeta</string>
+    <string name="settings_export_fallback">Si la carpeta elegida deja de estar disponible, las exportaciones pasarán automáticamente a %1$s.</string>
+
+    <!-- Página Personalizar (se abre desde Configuración) -->
+    <string name="settings_personalize">Personalizar</string>
+    <string name="settings_personalize_description">Colores, sonidos, texto y animaciones.</string>
+    <string name="settings_personalize_open">Personalizar</string>
+    <string name="settings_personalize_open_description">Cambia los colores, los sonidos, el texto y las animaciones.</string>
+
+    <!-- Subpágina de sonidos (se abre desde Personalizar) -->
+    <string name="settings_sounds_open">Sonidos</string>
+    <string name="settings_sounds_open_description">Pitido al escanear, sonido de venta, vibración y el aviso de escaneo.</string>
+    <string name="settings_sounds">Sonidos</string>
+    <string name="settings_sounds_description">Todo lo que la app suena o vibra al escanear y al vender.</string>
+
+    <!-- Subpágina de texto (se abre desde Personalizar) -->
+    <string name="settings_text_open">Texto</string>
+    <string name="settings_text_open_description">Tipografía y tamaño del texto.</string>
+    <string name="settings_text">Texto</string>
+    <string name="settings_text_description">La tipografía y el tamaño con el que se dibuja el texto.</string>
+    <string name="settings_text_size">Tamaño del texto</string>
+    <string name="settings_text_size_description">Escala todo el texto de la app manteniendo las proporciones de cada pantalla.</string>
+    <string name="settings_text_size_small">Pequeño</string>
+    <string name="settings_text_size_normal">Normal</string>
+    <string name="settings_text_size_large">Grande</string>
+
+    <!-- Subpágina de animaciones (se abre desde Personalizar) -->
+    <string name="settings_animations_open">Animaciones</string>
+    <string name="settings_animations_open_description">Velocidad de las transiciones, pantalla de inicio y animación de venta.</string>
+    <string name="settings_animations">Animaciones</string>
+    <string name="settings_animations_description">Cómo se mueve la app: transiciones, pantalla de inicio y animación de venta.</string>
+
+    <!-- Subpágina de color (se abre desde Personalizar) -->
+    <string name="settings_colours">Ajustes de color</string>
+    <string name="settings_colours_description">Fondo, botones, paneles, texto y resaltados.</string>
+    <string name="settings_colours_open">Ajustes de color</string>
+    <string name="settings_colours_open_description">Colores del fondo, los botones, los paneles, el texto y los resaltados.</string>
+    <string name="settings_colours_pending">Cambios de color sin aplicar</string>
+
+    <!-- Temas de color -->
+    <string name="settings_themes">Temas</string>
+    <string name="settings_themes_description">Paletas ya hechas, o tus propios conjuntos de los cuatro colores. Al elegir uno se aplica al instante.</string>
+    <string name="settings_themes_builtin">Incluidos</string>
+    <string name="settings_themes_saved">Tus temas</string>
+    <string name="settings_themes_empty">Todavía no hay temas guardados. Elige los cuatro colores abajo y guárdalos como tema.</string>
+    <string name="settings_themes_save">Guardar los colores actuales como tema</string>
+    <string name="settings_themes_save_hint">Guarda los cuatro colores de abajo con un nombre.</string>
+    <string name="settings_themes_name_label">Nombre del tema</string>
+    <string name="settings_themes_name_placeholder">p. ej. Verde tienda</string>
+    <string name="settings_themes_delete">Eliminar tema</string>
+    <string name="settings_themes_delete_confirm_title">¿Eliminar este tema?</string>
+    <string name="settings_themes_delete_confirm_body">Se quitará "%1$s" de tus temas. Los colores que estás usando no cambian.</string>
+    <string name="settings_themes_applied">%1$s aplicado</string>
+    <string name="settings_themes_active">En uso</string>
+
+    <!-- Nombres de los temas incluidos -->
+    <string name="theme_default">Predeterminado</string>
+    <string name="theme_sage">Salvia</string>
+    <string name="theme_sunset">Atardecer</string>
+    <string name="theme_midnight">Medianoche</string>
+    <string name="theme_ocean">Océano</string>
+
+    <string name="settings_background_colour">Color de fondo</string>
+    <string name="settings_background_colour_description">Sustituye el fondo de la app y los paneles que contienen los elementos de la lista.</string>
+    <string name="settings_custom_background">Fondo personalizado</string>
+    <string name="settings_button_colour">Color de botones</string>
+    <string name="settings_button_colour_description">Se usa en botones, chips, el botón flotante y los destacados.</string>
+    <string name="settings_custom_button_colour">Color de botones personalizado</string>
+    <string name="settings_panel_colour">Color de paneles</string>
+    <string name="settings_panel_colour_description">Las tarjetas y secciones que se colocan sobre el fondo.</string>
+    <string name="settings_custom_panel_colour">Color de paneles personalizado</string>
+    <string name="settings_text_colour">Color del texto</string>
+    <string name="settings_text_colour_description">Se usa en todas las etiquetas, valores y títulos de la app.</string>
+    <string name="settings_custom_text_colour">Color del texto personalizado</string>
+    <string name="settings_highlight_colour">Color de resaltado</string>
+    <string name="settings_highlight_colour_description">Se usa en los filtros seleccionados, el indicador de la pestaña activa y los títulos destacados.</string>
+    <string name="settings_custom_highlight_colour">Color de resaltado personalizado</string>
+    <string name="settings_font">Tipografía</string>
+    <string name="settings_font_description">Cambia la tipografía usada en toda la app.</string>
+    <string name="settings_font_default">Predeterminada</string>
+    <string name="settings_font_sans">Sans serif</string>
+    <string name="settings_font_serif">Serif</string>
+    <string name="settings_font_monospace">Monoespaciada</string>
+    <string name="settings_font_cursive">Cursiva</string>
+    <string name="settings_preview">Vista previa</string>
+    <string name="settings_preview_product">Café en grano</string>
+    <string name="settings_preview_quantity">Cant. 12</string>
+    <string name="settings_preview_button">Botón</string>
+    <string name="settings_preview_outlined_button">Contorno</string>
+    <string name="settings_pending_title">Los cambios de color aún no se han aplicado</string>
+    <string name="settings_pending_body">La vista previa va por separado de la aplicación para que el selector funcione con fluidez. Toca Aplicar para usar estos colores en toda la app.</string>
+    <string name="settings_discard">Descartar</string>
+    <string name="settings_apply_colours">Aplicar colores</string>
+    <string name="settings_reset_colours">  Volver a los colores predeterminados</string>
+    <string name="settings_back_to_personalize">Volver a Personalizar</string>
+    <string name="settings_storage_note">Los datos del inventario se guardan solo en este dispositivo.</string>
+
+    <!-- Enlaces sociales al pie de la página Configuración -->
+    <string name="settings_social_title">Sígueme en mis redes</string>
+    <string name="settings_social_website">Sitio web</string>
+    <string name="settings_social_instagram">Instagram</string>
+    <string name="settings_social_x">X</string>
+    <!-- Leído por TalkBack; %1$s es el nombre de la red. -->
+    <string name="settings_social_open">Abrir %1$s (@krisoll)</string>
+    <!-- Etiqueta de TalkBack para el sitio web, que no tiene usuario @ que leer. -->
+    <string name="settings_social_open_website">Abrir sitio web</string>
+
+    <!-- Full JSON data backup -->
+    <string name="settings_backup_title">Copia de seguridad</string>
+    <string name="settings_backup_description">Exporta toda la base de datos —categorías, productos, pedidos y cada línea de venta— en un único archivo JSON, y la restaura de nuevo.</string>
+    <string name="settings_backup_export">Exportar copia</string>
+    <string name="settings_backup_share">Compartir…</string>
+    <string name="settings_backup_note">El archivo contiene valores sin formato (céntimos, puntos base, milisegundos) para que otro programa pueda leerlo sin ambigüedad.</string>
+
+    <!-- Importing a backup back in -->
+    <string name="settings_backup_import">Importar copia…</string>
+    <string name="import_picker_title">Elige un archivo de copia</string>
+    <string name="import_confirm_title">¿Importar esta copia?</string>
+    <string name="import_confirm_file">Archivo</string>
+    <string name="import_confirm_summary">Contiene %1$d categorías, %2$d productos, %3$d pedidos y %4$d líneas de venta.</string>
+    <string name="import_confirm_summary_supplies">Insumos: %1$d proveedores, %2$d materiales, %3$d entradas y %4$d líneas de entrada.</string>
+    <string name="import_confirm_summary_promos">Promociones: %1$d reglas.</string>
+    <string name="import_confirm_exported">Exportada el %1$s</string>
+    <string name="import_confirm_exported_unknown">Fecha de exportación desconocida</string>
+    <string name="import_confirm_warning">Restaurar sobrescribe las cantidades en existencias, los productos, los pedidos y las ventas que hay ahora en este dispositivo. La apariencia y el idioma no se modifican.</string>
+    <string name="import_confirm_warning_partial">Algunas filas del archivo no se pudieron leer y se omitirán: %1$s</string>
+    <string name="import_confirm_restore_settings">Restaurar también los ajustes</string>
+    <string name="import_confirm_restore_settings_note">Sustituye los colores, la tipografía, el tamaño del texto, el idioma, la pantalla de inicio y los sonidos del escáner de este teléfono por los de la copia de seguridad.</string>
+    <string name="import_confirm_restore_settings_device">La carpeta de exportación y los archivos de sonido o imágenes de inicio propios se quedan como están en este dispositivo: viven aquí, no en el archivo.</string>
+    <string name="import_confirm_restore">Restaurar</string>
+    <string name="import_confirm_cancel">Cancelar</string>
+    <string name="import_nothing_to_import">Esa copia no contiene categorías, productos ni ventas.</string>
+    <string name="import_reading">Leyendo copia…</string>
+
+    <!-- Motion -->
+    <string name="settings_motion">Animaciones</string>
+    <string name="settings_motion_description">La rapidez de las transiciones entre pantallas y paneles. Desactívalas para quitar todas las animaciones.</string>
+    <string name="settings_motion_off">Desactivadas</string>
+    <string name="settings_motion_fast">Rápidas</string>
+    <string name="settings_motion_normal">Normales</string>
+    <string name="settings_motion_slow">Lentas</string>
+
+    <!-- Startup (loading) screen -->
+    <string name="settings_loading_screen">Pantalla de inicio</string>
+    <string name="settings_loading_screen_description">El icono giratorio que se muestra mientras la app carga.</string>
+    <string name="settings_loading_screen_enabled">Mostrar la pantalla de inicio</string>
+    <string name="settings_loading_image">Tu propia imagen</string>
+    <string name="settings_loading_image_description">Elige un PNG o JPG de tu dispositivo. Funciona mejor un logotipo o icono con el fondo transparente.</string>
+    <string name="settings_loading_image_choose">Elegir imagen</string>
+    <string name="settings_loading_image_change">Cambiar imagen</string>
+    <string name="settings_loading_image_failed">No se pudo usar esa imagen</string>
+    <string name="settings_loading_animation">Usar una animación</string>
+    <string name="settings_loading_animation_description">Una animación Lottie (.json o .lottie) se reproduce sola, así que los ajustes de giro y círculo no se le aplican. Si el archivo contiene varias animaciones, se usa la primera.</string>
+    <string name="settings_loading_animation_bundled">Usando la animación incluida</string>
+    <string name="settings_loading_animation_custom">Usando tu propia animación</string>
+    <string name="settings_loading_animation_choose">Elegir animación</string>
+    <string name="settings_loading_animation_change">Cambiar animación</string>
+    <string name="settings_loading_animation_remove">Usar una imagen</string>
+    <string name="settings_loading_animation_failed">Ese archivo no es una animación Lottie</string>
+
+    <string name="settings_loading_icon">O elige un icono</string>
+    <string name="settings_loading_icon_description">Se usa cuando no hay una imagen elegida.</string>
+    <string name="settings_loading_spin">Movimiento</string>
+    <string name="settings_loading_preview">Vista previa</string>
+    <string name="settings_loading_reset">  Restablecer la pantalla de inicio</string>
+    <string name="loading_icon_cart">Carrito</string>
+    <string name="loading_icon_inventory">Caja de códigos</string>
+    <string name="loading_icon_receipt">Recibo</string>
+    <string name="loading_icon_box">Caja</string>
+    <string name="loading_icon_store">Tienda</string>
+    <string name="loading_icon_barcode">Escáner</string>
+    <string name="loading_icon_tag">Etiqueta</string>
+    <string name="loading_icon_money">Pagos</string>
+    <string name="loading_icon_trending">Tendencia</string>
+    <string name="loading_icon_settings">Ajustes</string>
+    <string name="loading_spin_none">Quieta</string>
+    <string name="loading_spin_clockwise">Girar</string>
+    <string name="loading_spin_counter_clockwise">Girar al revés</string>
+    <string name="loading_spin_pendulum">Balancear</string>
+    <string name="loading_spin_pulse">Pulso</string>
+    <string name="loading_spin_bounce">Rebote</string>
+    <string name="loading_spin_slide">Deslizar</string>
+    <string name="loading_spin_slide_pause">Deslizar y pausar</string>
+    <string name="loading_screen_skip">Cargando</string>
+    <string name="loading_circle_none">Ninguno</string>
+    <string name="loading_circle_soft">Suave</string>
+    <string name="loading_circle_solid">Sólido</string>
+    <string name="loading_circle_outline">Contorno</string>
+    <string name="loading_circle_panel">Panel</string>
+    <string name="settings_loading_image_size">Tamaño de la imagen</string>
+    <string name="settings_loading_circle_size">Tamaño del círculo</string>
+    <string name="settings_loading_size_value">%1$d dp</string>
+    <string name="settings_loading_circle">Círculo de fondo</string>
+    <string name="settings_loading_circle_description">El disco que se dibuja detrás de tu imagen. Con Ninguno, la imagen va directamente sobre el fondo.</string>
+    <string name="settings_loading_image_gif_hint">Los GIF animados se reproducen, además de las imágenes fijas.</string>
+    <string name="settings_loading_image_gif_failed">No se pudo usar ese GIF. Prueba con uno más pequeño.</string>
+
+    <!-- Scanner feedback (Personalize page) -->
+    <string name="settings_scanner">Escáner</string>
+    <string name="settings_scanner_description">El pitido, el aviso emergente y cada cuánto acepta un escaneo la cámara.</string>
+    <string name="settings_scan_beep_enabled">Pitar al escanear un artículo</string>
+    <string name="settings_scan_beep">Sonido del pitido</string>
+    <string name="settings_scan_beep_description">Toca un sonido para escucharlo. Elige tu propio archivo para usar cualquiera del dispositivo.</string>
+    <string name="settings_scan_beep_classic">Pitido de caja</string>
+    <string name="settings_scan_beep_chirp">Chirrido ascendente</string>
+    <string name="settings_scan_beep_click">Clic suave</string>
+    <string name="settings_scan_beep_blip">Pulso grave</string>
+    <string name="settings_scan_beep_digital">Triple digital</string>
+    <string name="settings_scan_beep_own">Tu propio sonido</string>
+    <string name="settings_scan_beep_choose">Elegir sonido</string>
+    <string name="settings_scan_beep_change">Cambiar sonido</string>
+    <string name="settings_scan_beep_remove">Usar un sonido incluido</string>
+    <string name="settings_scan_beep_failed">No se pudo usar ese sonido</string>
+    <string name="settings_scan_beep_custom_active">Usando tu archivo de sonido</string>
+    <string name="settings_scan_section">Escáner</string>
+    <string name="settings_scan_section_description">Cómo se comporta la cámara mientras está abierta.</string>
+    <string name="settings_scan_delay">Mismo producto</string>
+    <string name="settings_scan_delay_description">Cuánto tiempo debe pasar antes de que la etiqueta que ya está delante de la cámara pueda contarse otra vez. Mantenlo alto para que un producto no se añada dos veces.</string>
+    <string name="settings_product_change_delay">Producto distinto</string>
+    <string name="settings_product_change_delay_description">Cuánto tiempo debe pasar antes de leer el siguiente producto. Mantenlo bajo para que pasar por una cesta siga siendo rápido.</string>
+    <string name="settings_scan_delay_value">%1$s s</string>
+    <string name="settings_scan_popup">Mostrar el producto escaneado</string>
+    <string name="settings_scan_popup_description">Un aviso pequeño sobre la cámara con el nombre del producto y su foto.</string>
+    <string name="settings_scan_vibration">Vibración</string>
+    <string name="settings_scan_vibration_enabled">Vibrar al escanear un artículo</string>
+    <string name="settings_scan_vibration_pattern">Patrón de vibración</string>
+    <string name="settings_scan_vibration_description">Toca un patrón para notarlo. Útil en un comercio ruidoso donde el pitido apenas se oye.</string>
+    <string name="settings_scan_vibration_duration">%1$s</string>
+    <string name="settings_scan_vibration_tap">Toque único</string>
+    <string name="settings_scan_vibration_double">Toque doble</string>
+    <string name="settings_scan_vibration_thump">Golpe firme</string>
+    <string name="settings_scan_vibration_buzz">Zumbido largo</string>
+    <string name="settings_scan_vibration_heartbeat">Latido</string>
+
+    <!-- Sale sound (Personalize page) -->
+    <string name="settings_sale_sound">Sonido de venta</string>
+    <string name="settings_sale_sound_description">Suena al cobrar una venta. Toca un sonido para escucharlo o elige tu propio archivo.</string>
+    <string name="settings_sale_sound_enabled">Sonar al completar una venta</string>
+    <string name="settings_sale_sound_list">Sonido de venta</string>
+    <string name="settings_sale_sound_cash_register">Caja registradora</string>
+    <string name="settings_sale_sound_chime">Campanilla suave</string>
+    <string name="settings_sale_sound_ascending">Notas ascendentes</string>
+    <string name="settings_sale_sound_bell">Campana</string>
+    <string name="settings_sale_sound_coins">Monedas</string>
+    <string name="settings_sale_sound_success">Fanfarria de éxito</string>
+    <string name="settings_sale_sound_own">Tu propio sonido</string>
+    <string name="settings_sale_sound_choose">Elegir sonido</string>
+    <string name="settings_sale_sound_change">Cambiar sonido</string>
+    <string name="settings_sale_sound_remove">Usar un sonido incluido</string>
+    <string name="settings_sale_sound_failed">No se pudo usar ese sonido</string>
+    <string name="settings_sale_sound_custom_active">Usando tu archivo de sonido</string>
+    <string name="settings_sale_animation">Animación de venta</string>
+    <string name="settings_sale_animation_description">La imagen que aparece al completar una venta. Toca una para verla.</string>
+    <string name="settings_sale_animation_thumbs_up">Pulgar arriba</string>
+    <string name="settings_sale_animation_check">Marca de verificación</string>
+    <string name="settings_sale_animation_star">Estrella</string>
+    <string name="settings_sale_animation_money">Hucha</string>
+    <string name="settings_sale_animation_celebration">Celebración</string>
+    <string name="settings_sale_animation_receipt">Recibo</string>
+    <string name="settings_sale_animation_medal">Medalla</string>
+    <string name="settings_sale_animation_size">Tamaño de la animación</string>
+    <string name="settings_sale_animation_size_description">Qué tan grande es la imagen en el recibo.</string>
+    <string name="settings_sale_animation_size_value">%1$d dp</string>
+    <string name="settings_sale_animation_own">Tu propia animación</string>
+    <string name="settings_sale_animation_own_description">Importa un archivo Lottie (.json o .lottie) para usarlo en lugar de las imágenes de arriba. Se reproduce en el recibo en su lugar. Si el archivo contiene varias animaciones, se usa la primera.</string>
+    <string name="settings_sale_animation_custom_active">Usando tu propia animación</string>
+    <string name="settings_sale_animation_choose">Elegir animación</string>
+    <string name="settings_sale_animation_change">Cambiar animación</string>
+    <string name="settings_sale_animation_remove">Usar una animación incluida</string>
+    <string name="settings_sale_animation_failed">Ese archivo no es una animación Lottie</string>
+    <string name="settings_sale_animation_preview">Vista previa — así se ve en el recibo</string>
+    <string name="settings_sale_animation_replay">Repetir la animación</string>
+    <string name="settings_sale_receipt_background">Oscurecer el fondo</string>
+    <string name="settings_sale_receipt_background_description">Difumina la pantalla a negro detrás del recibo para que el importe destaque.</string>
+    <string name="settings_sale_scrim_strength">Oscuridad</string>
+    <string name="settings_sale_scrim_strength_value">%1$s%%</string>
+    <string name="settings_scan_vibration_strength">Intensidad</string>
+    <string name="settings_scan_vibration_strength_description">Con qué fuerza vibra el teléfono. No todos los dispositivos permiten cambiarlo.</string>
+    <string name="settings_scan_vibration_strength_value">%1$d%%</string>
+    <string name="settings_scan_vibration_unsupported">Este dispositivo no tiene motor de vibración, así que este ajuste no tendrá efecto aquí.</string>
+    <string name="settings_scanner_reset">  Restablecer el sonido y la vibración</string>
+
+    <!-- Scanner banner -->
+    <string name="scanner_banner_unknown">Código desconocido</string>
+    <string name="scanner_banner_in_cart">En el carrito · %1$d</string>
+    <string name="scanner_banner_unknown_barcode">%1$s · no está en el inventario</string>
+
+    <!-- Colour picker -->
+    <string name="colour_picker_square_description">Saturación %1$d por ciento, brillo %2$d por ciento</string>
+    <string name="colour_picker_hue_label">Matiz</string>
+    <string name="colour_picker_hue_description">Matiz %1$d grados</string>
+    <string name="colour_picker_hex_label">Hex</string>
+    <string name="colour_picker_hex_error">Introduce 6 dígitos hexadecimales, p. ej. 6750A4</string>
+    <string name="colour_picker_readout">Matiz %1$d\u00B0 \u00B7 Saturación %2$d%% \u00B7 Brillo %3$d%%</string>
+
+    <!-- Snackbar messages -->
+    <!-- Shown on the busy overlay while a slow export runs -->
+    <string name="export_in_progress_csv">Exportando CSV…</string>
+    <string name="export_in_progress_json">Exportando copia…</string>
+    <string name="export_in_progress_pdf">Creando informe…</string>
+    <string name="export_in_progress_qr">Creando código QR…</string>
+    <string name="export_in_progress_default">Procesando…</string>
+    <string name="message_saved_to_folder">%1$s guardado en %2$s</string>
+    <string name="message_export_failed">Error al exportar: %1$s</string>
+    <string name="message_unknown_error">error desconocido</string>
+    <string name="message_add_barcode_first">Añade primero un código de barras</string>
+    <string name="message_folder_selected">Las exportaciones se guardarán en la carpeta seleccionada</string>
+    <string name="message_folder_unavailable">No se pudo conservar el acceso a esa carpeta</string>
+    <string name="message_folder_selected_session">Las exportaciones se guardarán en esa carpeta hasta que se reinicie la aplicación</string>
+    <string name="message_import_replaced">Copia restaurada · %1$d filas escritas</string>
+    <string name="message_import_merged">Copia combinada · %1$d filas añadidas</string>
+    <string name="message_import_partial">%1$d filas importadas · %2$d omitidas</string>
+    <string name="message_import_failed">Error al importar: %1$s</string>
+    <string name="message_colours_applied">Ajustes de color aplicados</string>
+    <string name="message_stock_added">Añadidas %1$d unidades de %2$s</string>
+    <string name="message_stock_restocked">+%1$d de existencias para %2$s</string>
+    <string name="message_sold_one">Vendida 1 unidad de %1$s \u00B7 quedan %2$d</string>
+    <string name="message_out_of_stock">%1$s está sin existencias</string>
+    <string name="message_barcode_not_found">No hay ningún producto con el código %1$s</string>
+    <string name="message_sale_cancelled">Venta anulada: +%1$d devueltas a %2$s</string>
+    <string name="message_order_cancelled">Venta anulada · %1$d artículo(s) devueltos al stock</string>
+    <string name="message_stock_removed">Se quitaron %1$d de %2$s</string>
+
+    <!-- Categorías -->
+    <string name="category_label">Categoría</string>
+    <string name="category_none">Sin categoría</string>
+    <string name="category_all">Todas</string>
+    <string name="category_uncategorised">Sin categoría</string>
+    <string name="category_new">Nueva categoría</string>
+    <string name="category_new_hint">Nombre de la categoría</string>
+    <string name="category_add">Añadir</string>
+    <string name="category_delete">Eliminar categoría</string>
+    <string name="category_delete_body">Los productos de esta categoría siguen en el inventario pero quedan sin categoría.</string>
+    <string name="category_edit_title">Categorías</string>
+    <string name="category_edit_description">Renombra, añade o elimina las categorías que agrupan tus productos.</string>
+    <string name="category_edit_empty">Todavía no hay categorías. Añade una abajo.</string>
+    <!-- Etiquetas (segunda clasificación opcional, desactivada por defecto) -->
+    <string name="settings_tags_section">Etiquetas</string>
+    <string name="settings_tags_section_description">Otra forma de marcar los productos, independiente de su categoría.</string>
+    <string name="settings_tags_enabled">Mostrar etiquetas</string>
+    <string name="settings_tags_enabled_note">Un producto puede llevar varias etiquetas — frágil, liquidación, reponer — mientras que solo tiene una categoría. Están ocultas hasta que lo actives; lo que etiquetes se conserva si lo desactivas de nuevo.</string>
+
+    <string name="tags_title">Etiquetas</string>
+    <string name="tags_description">Marcas que puedes poner en cualquier producto. Un producto puede tener varias.</string>
+    <string name="tag_new_label">Nueva etiqueta</string>
+    <string name="tag_add">Añadir etiqueta</string>
+    <string name="tag_empty">Aún no hay etiquetas. Añade una arriba para empezar a marcar productos.</string>
+    <string name="tag_rename">Renombrar</string>
+    <string name="tag_rename_label">Nombre de la etiqueta</string>
+    <string name="tag_rename_empty">Escribe un nombre de etiqueta</string>
+    <string name="tag_rename_duplicate">Ya existe una etiqueta llamada \"%1$s\"</string>
+    <string name="tag_product_count">%1$d producto(s)</string>
+    <string name="tag_delete">Eliminar</string>
+    <string name="tag_delete_title">¿Eliminar esta etiqueta?</string>
+    <string name="tag_delete_body">\"%1$s\" se quitará de todos los productos que la tengan. Los productos no se eliminan.</string>
+    <string name="tags_menu">Gestionar etiquetas</string>
+    <string name="product_tags_label">Etiquetas</string>
+    <string name="product_tags_description">Marcas opcionales para este producto. Puedes seleccionar varias.</string>
+    <string name="product_tags_none">Aún no hay etiquetas: crea algunas desde los ajustes del inventario.</string>
+    <string name="inventory_tag_filter">Filtrar por etiqueta</string>
+
+    <string name="category_rename">Renombrar</string>
+    <string name="category_rename_label">Nombre de la categoría</string>
+    <string name="category_rename_empty">Escribe un nombre de categoría</string>
+    <string name="category_rename_duplicate">Ya existe una categoría llamada \"%1$s\"</string>
+    <string name="category_product_count">%1$d producto(s)</string>
+    <string name="category_menu">Ajustes del inventario</string>
+    <string name="category_menu_edit">Editar categorías</string>
+
+    <!-- Exportación del historial -->
+    <string name="sales_export_csv">Exportar CSV</string>
+    <string name="sales_export_day_csv">Exportar CSV de este día</string>
+    <string name="sales_report">Informe</string>
+    <string name="sales_report_title">Informe del día</string>
+    <string name="sales_report_close">Cerrar informe</string>
+    <string name="sales_report_orders">Ventas</string>
+    <string name="sales_report_items">Artículos</string>
+    <string name="sales_report_gross">Bruto</string>
+    <string name="sales_report_tax">Impuesto</string>
+    <string name="sales_report_card_fee">Comisión tarjeta</string>
+    <string name="sales_report_card_fee_fixed">Comisión fija tarjeta</string>
+    <string name="sales_report_net">Neto</string>
+    <string name="sales_report_best_sellers">Más vendidos</string>
+    <string name="sales_report_by_hour">Ingresos por hora</string>
+    <string name="sales_report_payment_split">Reparto por pago</string>
+    <string name="sales_report_export_pdf">Exportar PDF del día</string>
+    <string name="sales_report_export_csv">Exportar CSV del día</string>
+    <string name="sales_report_empty">No hubo ventas este día</string>
+
+    <!-- Informe diario en PDF -->
+    <string name="sales_report_company">CrummyStock</string>
+    <string name="sales_report_units_sold_chart">Unidades vendidas</string>
+    <string name="sales_report_total_sales_chart">Ventas totales</string>
+    <string name="sales_report_item_sold_chart">Artículos vendidos</string>
+    <string name="sales_report_table_items">Artículo</string>
+    <string name="sales_report_table_price">Precio</string>
+    <string name="sales_report_table_qty">Cant.</string>
+    <string name="sales_report_table_amount">Importe</string>
+    <string name="sales_report_table_tax_rate">% IVA</string>
+    <string name="sales_report_table_tax">IVA</string>
+    <string name="sales_report_table_card_fee">Com. tarj.</string>
+    <string name="sales_report_table_total">Neto</string>
+    <string name="sales_report_table_grand_total">Total</string>
+    <string name="sales_report_table_more">+%1$d productos más</string>
+    <string name="sales_report_notes">Notas:</string>
+    <string name="sales_report_note_total">Hoy se ingresaron %1$s en %2$d ventas.</string>
+    <string name="sales_report_note_best_seller">El más vendido fue %1$s, con %2$d unidades y %3$s.</string>
+    <string name="sales_report_note_busiest_hour">La hora de mayor actividad fue las %1$s, con %2$s.</string>
+    <string name="sales_report_units_sold">%1$d unidades</string>
+    <string name="sales_export_all">Exportar todas las ventas</string>
+    <string name="message_sale_product_missing">Venta eliminada, pero %1$s ya no existe, así que sus existencias no se han restaurado</string>
+    <string name="message_sale_not_found">Esa venta ya no existe</string>
+    <string name="message_could_not_save">No se pudo guardar</string>
+    <string name="message_could_not_delete">No se pudo eliminar</string>
+    <string name="message_could_not_cancel_sale">No se pudo anular la venta</string>
+    <string name="message_could_not_restock">No se pudo reponer</string>
+    <string name="message_product_saved">Guardado: %1$s</string>
+    <string name="message_product_deleted">Eliminado: %1$s</string>
+
+    <!-- Repository validation errors -->
+    <string name="error_barcode_empty">El código de barras no puede estar vacío</string>
+    <string name="error_name_empty">El nombre no puede estar vacío</string>
+    <string name="error_quantity_positive">La cantidad debe ser al menos 1</string>
+    <string name="error_could_not_restock_product">No se pudo reponer %1$s</string>
+
+    <!-- Selección de idioma -->
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_description">Elige el idioma que usa la aplicación.</string>
+    <string name="language_system">Idioma del sistema</string>
+    <string name="language_english">English</string>
+    <string name="language_spanish">Español</string>
+
+    <!-- Secciones de color plegables -->
+    <string name="settings_font_darumadrop">Darumadrop One</string>
+    <string name="settings_font_charaisilbold">Charisil Bold</string>
+    <string name="settings_font_charaisilregular">Charisil Regular</string>
+    <string name="settings_font_coiny">Coiny</string>
+    <string name="settings_font_enriqueta">Enriqueta</string>
+    <string name="settings_font_hennypenny">Henny Penny</string>
+    <string name="settings_font_lacquer">Lacquer</string>
+    <string name="settings_font_limelight">Limelight</string>
+
+    <string name="settings_show_colour_picker">Elegir color</string>
+    <string name="settings_hide_colour_picker">Ocultar selector de color</string>
+
+    <!-- Carrito y cobro -->
+    <string name="cart_title">Carrito</string>
+    <string name="cart_subtitle_empty">Escanea un producto o elige uno del inventario</string>
+    <string name="cart_add_from_inventory">Añadir del inventario</string>
+    <string name="cart_pick_product">Elige un producto</string>
+    <string name="cart_pick_close">Cerrar la lista de productos</string>
+    <string name="cart_pick_added">Añadido</string>
+    <string name="cart_pick_search_hint">Buscar por nombre o código</string>
+    <string name="cart_pick_search_clear">Borrar búsqueda</string>
+    <string name="cart_pick_no_matches">Ningún producto coincide con la búsqueda</string>
+    <string name="cart_scan_prompt">Apunta la cámara a un código QR para añadirlo al carrito</string>
+    <string name="cart_scan_button">Escanear</string>
+    <string name="cart_empty_title">El carrito está vacío</string>
+    <string name="cart_empty_body">Escanea productos o añádelos desde la lista de inventario.</string>
+    <string name="cart_empty_message">El carrito está vacío</string>
+    <string name="cart_line_price">%1$s × %2$d</string>
+    <string name="cart_increase">Añadir uno</string>
+    <string name="cart_decrease">Quitar uno</string>
+    <string name="cart_remove_line">Quitar del carrito</string>
+    <string name="cart_clear">Vaciar carrito</string>
+    <string name="cart_clear_confirm_title">¿Vaciar el carrito?</string>
+    <string name="cart_clear_confirm_body">Se quitarán todos los artículos del carrito.</string>
+    <string name="cart_at_max_stock">%1$s: no queda más existencias</string>
+    <string name="cart_insufficient_stock">%1$s: solo hay %3$d disponibles pero se pidieron %2$d</string>
+    <string name="cart_product_missing">%1$s ya no está disponible</string>
+    <string name="cart_items_subtotal">Artículos</string>
+    <string name="cart_tax_label">Impuesto (%1$s %%)</string>
+    <string name="cart_card_fee_label">Comisión tarjeta (%1$s %%)</string>
+    <string name="cart_card_fee_fixed_only_label">Comisión tarjeta (fija)</string>
+    <string name="cart_card_fee_mixed_label">Comisión tarjeta (%1$s %% + %2$s)</string>
+    <string name="cart_net_total">Total neto</string>
+    <string name="cart_amount_due">A cobrar</string>
+    <string name="cart_checkout">Cobrar</string>
+    <string name="cart_checking_out">Procesando…</string>
+    <string name="cart_receipt_title">Venta completada</string>
+    <string name="cart_receipt_total">Cobrado %1$s</string>
+    <string name="cart_receipt_done">Hecho</string>
+
+    <!-- Nota opcional asociada a una venta -->
+    <string name="cart_note_label">Nota (opcional)</string>
+    <string name="cart_note_placeholder">Cliente, número de cuenta…</string>
+    <string name="cart_note_clear">Quitar nota</string>
+    <string name="sales_note_label">Nota</string>
+    <string name="sales_note_indicator">Tiene nota</string>
+
+    <!-- Forma de pago -->
+    <string name="payment_method_label">Forma de pago</string>
+    <string name="payment_cash">Efectivo</string>
+    <string name="payment_card">Tarjeta</string>
+    <string name="cart_added_to_cart">%1$s añadido al carrito</string>
+    <string name="cart_checked_out_cash">Venta completada en efectivo · %1$s</string>
+    <string name="cart_checked_out_card">Venta completada con tarjeta · %1$s</string>
+
+    <!-- Configuración de tasas -->
+    <string name="settings_rates">Tasas</string>
+    <string name="settings_rates_description">Se aplican a cada venta y se descuentan del total.</string>
+    <string name="settings_tax_rate">Impuesto general (%%)</string>
+    <string name="settings_card_fee_rate">Comisión tarjeta (%%)</string>
+    <string name="settings_card_fee_fixed">Comisión fija por tarjeta</string>
+    <string name="settings_rates_note">El impuesto y la comisión se descuentan del total de la venta. La comisión solo se aplica al pagar con tarjeta, y es el porcentaje más la comisión fija por operación.</string>
+    <string name="settings_rate_saved">Tasas guardadas</string>
+
+    <!-- Exportación CSV: cabeceras de columnas y fila de totales -->
+    <string name="csv_col_order_id">ID de pedido</string>
+    <string name="csv_col_sale_id">ID de venta</string>
+    <string name="csv_col_date">Fecha</string>
+    <string name="csv_col_time">Hora</string>
+    <string name="csv_col_payment">Pago</string>
+    <string name="csv_col_product">Producto</string>
+    <string name="csv_col_barcode">Código de barras</string>
+    <string name="csv_col_items">Artículos</string>
+    <string name="csv_col_quantity">Cantidad</string>
+    <string name="csv_col_items_subtotal">Subtotal artículos</string>
+    <string name="csv_col_unit_price">Precio unitario</string>
+    <!-- Se lee con Context.getString (sin formato), así que un solo % es literal. -->
+    <string name="csv_col_tax_rate">Impuesto (%)</string>
+    <string name="csv_col_tax">Impuesto</string>
+    <string name="csv_col_card_fee_rate">Comisión tarjeta (%)</string>
+    <string name="csv_col_card_fee_fixed">Comisión fija</string>
+    <string name="csv_col_card_fee">Comisión tarjeta</string>
+    <string name="csv_col_total">Total</string>
+    <string name="csv_col_net_total">Total neto</string>
+    <string name="csv_col_note">Nota</string>
+    <string name="csv_totals">Totales</string>
+
+    <!-- Promos -->
+    <string name="promo_tab_inventory">Inventario</string>
+    <string name="promo_tab_promos">Promociones</string>
+    <string name="promo_new">Nueva promoción</string>
+    <string name="promo_edit_title">Editar promoción</string>
+    <string name="promo_empty_title">Todavía no hay promociones</string>
+    <string name="promo_empty_body">Crea una promoción para descontar una categoría o un conjunto de productos cuando se compren suficientes.</string>
+    <string name="promo_name_label">Nombre de la promoción</string>
+    <string name="promo_name_placeholder">p. ej. Oferta café</string>
+    <string name="promo_kind">Se aplica a</string>
+    <string name="promo_kind_category">Una categoría</string>
+    <string name="promo_kind_products">Productos seleccionados</string>
+    <string name="promo_category_label">Categoría</string>
+    <string name="promo_category_none">Elige una categoría</string>
+    <string name="promo_products_label">Productos</string>
+    <string name="promo_products_none">Ningún producto seleccionado</string>
+    <string name="promo_products_selected">%1$d seleccionados</string>
+    <string name="promo_products_missing">%1$d producto(s) ya no existen</string>
+    <string name="promo_products_choose">Elegir productos</string>
+    <string name="promo_products_done">Hecho</string>
+    <string name="promo_threshold_label">Unidades necesarias</string>
+    <string name="promo_threshold_description">El carrito debe tener al menos esta cantidad de unidades de los productos de arriba. Distintos productos suman al mismo total.</string>
+    <string name="promo_discount">Descuento</string>
+    <string name="promo_discount_percent">Porcentaje</string>
+    <string name="promo_discount_fixed">Importe fijo</string>
+    <string name="promo_discount_percent_label">Porcentaje de descuento (%%)</string>
+    <string name="promo_discount_fixed_label">Importe de descuento</string>
+    <string name="promo_schedule">Programación</string>
+    <string name="promo_schedule_description">Deja las fechas vacías para que la promoción siga activa hasta que la desactives.</string>
+    <string name="promo_starts_label">Empieza</string>
+    <string name="promo_ends_label">Termina</string>
+    <string name="promo_no_start">Ahora mismo</string>
+    <string name="promo_no_end">Sin fecha de fin</string>
+    <string name="promo_clear_date">Borrar</string>
+    <string name="promo_enabled">Promoción activa</string>
+    <string name="promo_save">Guardar promoción</string>
+    <string name="promo_incomplete">Falta: %1$s</string>
+    <string name="promo_delete">Eliminar promoción</string>
+    <string name="promo_delete_title">¿Eliminar esta promoción?</string>
+    <string name="promo_delete_body">Se eliminará %1$s. Las ventas anteriores que la usaron conservan su descuento.</string>
+    <string name="promo_saved">Guardada: %1$s</string>
+    <string name="promo_deleted">Eliminada: %1$s</string>
+    <string name="promo_status_active">Activa</string>
+    <string name="promo_status_scheduled">Programada</string>
+    <string name="promo_status_expired">Caducada</string>
+    <string name="promo_status_off">Desactivada</string>
+    <string name="promo_summary_category">Cualquier %1$d de %2$s</string>
+    <string name="promo_summary_products">Cualquier %1$d de %2$d productos</string>
+    <string name="promo_summary_percent">%1$s%% de descuento</string>
+    <string name="promo_summary_fixed">%1$s de descuento</string>
+    <string name="promo_summary">%1$s · %2$s</string>
+    <string name="promo_badge_auto">Se aplica automáticamente</string>
+
+    <!-- Promociones en el carrito -->
+    <string name="cart_promo_label">Promoción</string>
+    <string name="cart_promo_remove">Quitar la promoción: %1$s</string>
+    <string name="cart_promo_restore">Volver a aplicar la promoción: %1$s</string>
+    <string name="cart_promo_removed">%1$s (quitada)</string>
+    <string name="cart_promo_applied">%1$s</string>
+    <!-- Se muestra junto a una promoción que se aplicó varias veces, p. ej. "Promoción: 2x1 (\u00d72)" -->
+    <string name="cart_promo_repeated">%1$s (\u00d7%2$d)</string>
+    <string name="cart_promo_none">Todavía no se aplica ninguna promoción</string>
+    <string name="cart_promo_hint">Añade %1$d más de %2$s para %3$s de descuento</string>
+    <string name="cart_promo_hint_products">Añade %1$d más para %2$s de descuento</string>
+
+    <!-- Promociones en la copia de seguridad -->
+    <string name="settings_backup_include_promos">Incluir promociones</string>
+    <string name="settings_backup_include_promos_note">Restaurar una copia que contenga promociones vuelve a activar esos descuentos para las fechas que cubren.</string>
+
+    <!-- Fotos de productos en la copia de seguridad -->
+    <string name="settings_backup_include_images">Incluir fotos</string>
+    <string name="settings_backup_include_images_note_off">Desactivado: un único archivo .json solo con los datos. Las fotos se quedan en este dispositivo.</string>
+    <string name="settings_backup_include_images_note_on">Activado: un archivo .zip con los datos y todas las fotos de producto, para que al restaurar en otro dispositivo vengan también las fotos.</string>
+    <string name="export_in_progress_archive">Exportando copia con fotos…</string>
+
+    <!-- Moneda -->
+    <string name="settings_currency">Moneda</string>
+    <string name="settings_currency_description">El símbolo que aparece delante de cada importe.</string>
+    <string name="settings_currency_note">Los precios se guardan como números, así que cambiar el símbolo los reetiqueta en lugar de convertirlos. Si cambias a otra moneda, vuelve a introducir los precios.</string>
+
+    <!-- Ajustes de visualización -->
+    <string name="settings_display">Visualización</string>
+    <string name="settings_display_description">Cómo se muestran los importes. Los precios siempre se guardan con exactitud, así que nada cambia al activar esto.</string>
+    <string name="settings_show_decimals">Mostrar céntimos</string>
+    <string name="settings_show_decimals_example">Activado: 12,99 · Desactivado: 13</string>
+
+    <!-- Onboarding (primer inicio) -->
+    <string name="onboarding_next">Siguiente</string>
+    <string name="onboarding_back">Atrás</string>
+    <string name="onboarding_skip">Omitir</string>
+    <string name="onboarding_finish">Empezar a usar la app</string>
+    <string name="onboarding_step_of">Paso %1$d de %2$d</string>
+
+    <string name="onboarding_language_title">Elige tu idioma</string>
+    <string name="onboarding_language_description">Toda la app usará este idioma. Puedes cambiarlo más tarde en Ajustes.</string>
+
+    <string name="onboarding_currency_title">¿En qué moneda vendes?</string>
+    <string name="onboarding_currency_description">Esto fija el símbolo que aparece delante de cada importe. Etiqueta tus precios: no los convierte.</string>
+
+    <string name="onboarding_decimals_title">¿Mostrar céntimos?</string>
+    <string name="onboarding_decimals_description">Los céntimos siempre se guardan con exactitud, así que desactivar esto solo cambia lo que se muestra, no lo que tienes.</string>
+
+    <!-- Pie de página -->
+    <string name="settings_version">CrummyStock v%1$s (compilación %2$d)</string>
+
+    <!-- Insumos -->
+    <string name="supplies_tab_providers">Proveedores</string>
+    <string name="supplies_tab_materials">Materiales</string>
+    <string name="supplies_tab_entries">Entradas</string>
+    <string name="supplies_more_options">Más opciones</string>
+
+    <!-- Insumos: proveedores -->
+    <string name="supplies_provider_new">Nuevo proveedor</string>
+    <string name="supplies_provider_edit_title">Editar proveedor</string>
+    <string name="supplies_provider_name">Nombre</string>
+    <string name="supplies_provider_phone">Teléfono</string>
+    <string name="supplies_provider_address">Dirección</string>
+    <string name="supplies_provider_notes">Notas</string>
+    <string name="supplies_provider_search">Buscar por nombre o teléfono</string>
+    <string name="supplies_provider_summary_label">Proveedores</string>
+    <string name="supplies_provider_empty_title">Aún no hay proveedores</string>
+    <string name="supplies_provider_empty_body">Toca \u201CNuevo proveedor\u201D para añadir a quién le compras los insumos.</string>
+    <string name="supplies_provider_no_matches_title">Ningún proveedor coincide</string>
+    <string name="supplies_provider_no_matches_body">Prueba con otro nombre u otro teléfono.</string>
+    <string name="supplies_provider_delete_title">¿Eliminar el proveedor?</string>
+    <string name="supplies_provider_delete_body">Se eliminará %1$s. El historial de compras se conserva, pero dejará de estar vinculado a un proveedor.</string>
+    <string name="supplies_provider_saved">Proveedor guardado: %1$s</string>
+    <string name="supplies_provider_deleted">Proveedor eliminado: %1$s</string>
+    <string name="supplies_provider_duplicate">Ya existe un proveedor llamado %1$s</string>
+    <string name="supplies_provider_name_required">Introduce el nombre del proveedor</string>
+    <plurals name="supplies_provider_purchases">
+        <item quantity="one">%d compra</item>
+        <item quantity="other">%d compras</item>
+    </plurals>
+    <string name="supplies_provider_purchases_total">%1$s \u00B7 %2$s</string>
+    <string name="supplies_provider_total">%1$s en total</string>
+
+    <!-- Insumos: materiales -->
+    <string name="supplies_material_new">Nuevo material</string>
+    <string name="supplies_material_edit_title">Editar material</string>
+    <string name="supplies_material_name">Nombre</string>
+    <string name="supplies_material_unit">Unidad</string>
+    <string name="supplies_material_custom_unit">Unidad personalizada</string>
+    <string name="supplies_material_custom_unit_placeholder">p. ej., saco, rollo, par</string>
+    <string name="supplies_material_stock">Existencias actuales</string>
+    <string name="supplies_material_stock_hint">Cantidad disponible actualmente</string>
+    <string name="supplies_material_threshold">Umbral de stock bajo</string>
+    <string name="supplies_material_threshold_hint">Avisar cuando las existencias lleguen a este número</string>
+    <string name="supplies_material_notes">Notas</string>
+    <string name="supplies_material_search">Buscar materiales</string>
+    <string name="supplies_material_summary_items">Materiales</string>
+    <string name="supplies_material_summary_low">Stock bajo</string>
+    <string name="supplies_material_summary_value">Valor del stock</string>
+    <string name="supplies_material_filter_all">Todos (%1$d)</string>
+    <string name="supplies_material_filter_low">Bajo</string>
+    <string name="supplies_material_filter_out">Agotado</string>
+    <string name="supplies_material_stock_with_unit">%1$d %2$s</string>
+    <string name="supplies_material_badge_low">Bajo</string>
+    <string name="supplies_material_badge_out">Agotado</string>
+    <string name="supplies_material_last_cost">Último pago %1$s</string>
+    <string name="supplies_material_no_purchases">Aún no hay compras</string>
+    <string name="supplies_material_empty_title">Aún no hay materiales</string>
+    <string name="supplies_material_empty_body">Toca \u201CNuevo material\u201D para añadir los insumos que compras y usas.</string>
+    <string name="supplies_material_no_matches_title">Nada coincide con los filtros</string>
+    <string name="supplies_material_no_matches_body">Prueba a borrar la búsqueda o a elegir otro filtro.</string>
+    <string name="supplies_material_adjust">Ajustar existencias</string>
+    <string name="supplies_material_adjust_title">Ajustar existencias</string>
+    <string name="supplies_material_adjust_body">Existencias actuales: %1$d %2$s. Esto es una corrección, no una compra. Registra las compras como entradas para que conserven su coste.</string>
+    <string name="supplies_material_new_stock">Nuevas existencias</string>
+    <string name="supplies_material_stock_updated">Existencias actualizadas: %1$s</string>
+    <string name="supplies_material_saved">Material guardado: %1$s</string>
+    <string name="supplies_material_deleted">Material eliminado: %1$s</string>
+    <string name="supplies_material_duplicate">Ya existe un material llamado %1$s</string>
+    <string name="supplies_material_name_required">Introduce el nombre del material</string>
+    <string name="supplies_material_custom_unit_required">Introduce la unidad personalizada</string>
+    <string name="supplies_material_delete_title">¿Eliminar el material?</string>
+    <string name="supplies_material_delete_body">Se eliminará %1$s. Las compras pasadas conservan su nombre y unidad.</string>
+    <string name="supplies_material_stock_note">Las compras se registran como entradas y aumentan este stock automáticamente.</string>
+
+    <!-- Insumos: entradas -->
+    <string name="supplies_entry_new">Nueva entrada</string>
+    <string name="supplies_entry_editor_title">Nueva compra</string>
+    <string name="supplies_entry_title">Detalle de la compra</string>
+    <string name="supplies_entry_summary_month">Este mes</string>
+    <string name="supplies_entry_summary_count">Entradas</string>
+    <string name="supplies_entry_search">Buscar referencia, nota o proveedor</string>
+    <string name="supplies_entry_filter_all_providers">Todos los proveedores</string>
+    <string name="supplies_entry_empty_title">Aún no hay compras registradas</string>
+    <string name="supplies_entry_empty_body">Toca \u201CNueva entrada\u201D para registrar una compra a un proveedor.</string>
+    <string name="supplies_entry_no_matches_title">Ninguna compra coincide</string>
+    <string name="supplies_entry_no_matches_body">Prueba otra búsqueda u otro proveedor.</string>
+    <string name="supplies_entry_date">Fecha</string>
+    <string name="supplies_entry_provider">Proveedor</string>
+    <string name="supplies_entry_select_provider">Seleccionar proveedor</string>
+    <string name="supplies_entry_reference">Referencia</string>
+    <string name="supplies_entry_reference_placeholder">Factura o folio (opcional)</string>
+    <string name="supplies_entry_note">Nota</string>
+    <string name="supplies_entry_note_placeholder">Nota opcional</string>
+    <string name="supplies_entry_lines_title">Materiales</string>
+    <string name="supplies_entry_add_material">Añadir material</string>
+    <string name="supplies_entry_no_lines">Añade al menos un material a esta compra.</string>
+    <string name="supplies_entry_quantity">Cantidad</string>
+    <string name="supplies_entry_unit_cost">Coste unitario</string>
+    <string name="supplies_entry_line_total">Total de la línea</string>
+    <string name="supplies_entry_total">Total</string>
+    <string name="supplies_entry_remove_line">Quitar material</string>
+    <string name="supplies_entry_material_unavailable">Este material ya no está disponible</string>
+    <string name="supplies_entry_detail_line_amount">%1$d %2$s × %3$s</string>
+    <string name="supplies_entry_stock_note">Al guardar aumentan las existencias de cada material de esta compra.</string>
+    <string name="supplies_entry_saved">Compra guardada</string>
+    <string name="supplies_entry_deleted">Compra eliminada</string>
+    <string name="supplies_entry_delete_title">¿Eliminar esta compra?</string>
+    <string name="supplies_entry_delete_body">Se quitarán las existencias que añadió. Esto no se puede deshacer.</string>
+    <string name="supplies_entry_delete_action">Eliminar compra</string>
+    <string name="supplies_entry_delete_hint">Las compras no se pueden editar. Elimina esta y registra una nueva entrada para corregirla.</string>
+    <string name="supplies_entry_delete_blocked">No se puede eliminar: solo quedan %2$d de %1$s, pero esta compra añadió %3$d.</string>
+    <string name="supplies_entry_provider_missing">Ese proveedor ya no existe</string>
+    <string name="supplies_entry_material_missing">Un material de esta compra ya no existe</string>
+    <string name="supplies_entry_duplicate_material">Cada material puede aparecer solo una vez: %1$s</string>
+    <string name="supplies_entry_invalid_line">Revisa la cantidad y el coste unitario de %1$s</string>
+    <string name="supplies_entry_total_too_large">El total de esta compra es demasiado grande</string>
+    <string name="supplies_entry_stock_too_large">Las existencias superarían el máximo de %1$s</string>
+    <string name="supplies_entry_empty">Añade al menos un material a esta compra</string>
+    <string name="supplies_entry_pick_provider_title">Elegir proveedor</string>
+    <string name="supplies_entry_pick_material_title">Elegir material</string>
+    <string name="supplies_entry_search_providers">Buscar proveedores</string>
+    <string name="supplies_entry_search_materials">Buscar materiales</string>
+    <string name="supplies_entry_no_providers">Aún no hay proveedores</string>
+    <string name="supplies_entry_no_materials">Aún no hay materiales</string>
+    <string name="supplies_entry_no_provider_matches">Ningún proveedor coincide</string>
+    <string name="supplies_entry_no_material_matches">Ningún material coincide</string>
+    <string name="supplies_entry_create_provider_body">Añade uno ahora o créalo en la pestaña Proveedores.</string>
+    <string name="supplies_entry_create_material_body">Añade uno ahora o créalo en la pestaña Materiales.</string>
+    <string name="supplies_entry_picker_stock">%1$d %2$s en existencia</string>
+    <string name="supplies_entry_close_picker">Cerrar selector</string>
+    <plurals name="supplies_entry_lines">
+        <item quantity="one">%d línea</item>
+        <item quantity="other">%d líneas</item>
+    </plurals>
+
+    <!-- Unidades de medida -->
+    <string name="unit_piece">pieza</string>
+    <string name="unit_pack">paquete</string>
+    <string name="unit_box">caja</string>
+    <string name="unit_bag">bolsa</string>
+    <string name="unit_dozen">docena</string>
+    <string name="unit_kg">kg</string>
+    <string name="unit_gram">g</string>
+    <string name="unit_litre">L</string>
+    <string name="unit_millilitre">mL</string>
+    <string name="unit_metre">m</string>
+    <string name="unit_other">otra</string>
+
+    <!-- Pantalla de analíticas -->
+    <string name="analytics_title">Analíticas</string>
+    <string name="analytics_close">Cerrar analíticas</string>
+    <string name="analytics_range_week">Últimos 7 días</string>
+    <string name="analytics_average_day">Media por día</string>
+    <string name="analytics_best_day">Mejor día</string>
+    <string name="analytics_discounts">Descuentos</string>
+    <string name="analytics_trend_chart">Ingreso neto por día</string>
+    <string name="analytics_payment_chart">Forma de pago</string>
+    <string name="analytics_payment_cash">Efectivo</string>
+    <string name="analytics_payment_card">Tarjeta</string>
+    <string name="analytics_top_products">Productos más vendidos</string>
+    <string name="analytics_empty">Todavía no hay ventas en este periodo.</string>
+    <string name="analytics_day_section">Día seleccionado</string>
+
+    <!-- Modos de vista del inventario -->
+    <string name="inventory_view_list">Lista</string>
+    <string name="inventory_view_folders">Carpetas</string>
+    <string name="inventory_view_switch">Cambiar la vista del inventario</string>
+    <string name="inventory_folder_count">%1$d productos</string>
+    <string name="inventory_folder_empty">Sin productos</string>
+    <string name="inventory_folder_back">Volver a las carpetas</string>
+    <string name="inventory_favourite">Añadir a favoritos</string>
+    <string name="inventory_unfavourite">Quitar de favoritos</string>
+
+    <!-- Transferencia por Wi-Fi -->
+    <string name="transfer_title">Transferir por Wi-Fi</string>
+    <string name="transfer_back">Atrás</string>
+    <string name="transfer_warning">Esta transferencia no está cifrada. Úsala en una red de confianza, como el Wi-Fi de tu tienda o de tu casa. No dejes la conexión abierta cuando termines.</string>
+    <string name="transfer_permission_required">Android está bloqueando el acceso a la red local para esta app. Permite los dispositivos cercanos (red local) en los ajustes de Android para que el ordenador pueda llegar a este teléfono.</string>
+    <string name="transfer_permission_action">Permitir acceso</string>
+
+    <string name="transfer_receive_title">Conectar con un ordenador</string>
+    <string name="transfer_receive_description">Inicia un servidor temporal en este teléfono. Introduce la dirección y el código de abajo en la app del ordenador. El ordenador podrá enviar aquí una copia o descargar los datos de este teléfono, incluidas las fotos de los productos.</string>
+    <string name="transfer_receive_start">Iniciar conexión</string>
+    <string name="transfer_receive_retry">Reintentar</string>
+    <string name="transfer_receive_stop">Detener</string>
+    <string name="transfer_receive_hint">El servidor se detiene solo tras una transferencia correcta, o tras cinco minutos sin conexión.</string>
+    <string name="transfer_receive_done">Transferencia completada. El servidor se ha detenido.</string>
+    <string name="transfer_export_done">El ordenador ha descargado la copia. El servidor se ha detenido.</string>
+    <string name="transfer_waiting">Esperando a que se conecte el ordenador…</string>
+    <string name="transfer_receiving">Recibiendo…</string>
+    <string name="transfer_address">Dirección</string>
+    <string name="transfer_port">Puerto</string>
+    <string name="transfer_code">Código</string>
+    <string name="transfer_no_wifi">Sin conexión Wi-Fi</string>
+    <string name="transfer_port_unavailable">El puerto %1$s ya está en uso en este teléfono. Cierra la otra app que lo usa o inténtalo de nuevo.</string>
+
+    <string name="transfer_error_not_backup">Lo que ha llegado no es una copia que esta app pueda leer. No se ha cambiado nada.</string>
+    <string name="transfer_failed">La transferencia falló. No se ha cambiado nada.</string>
+
+    <string name="settings_transfer_title">Transferir por Wi-Fi</string>
+    <string name="settings_transfer_description">Envía o recibe una copia con tu ordenador en la misma red, sin cables.</string>
+    <string name="settings_transfer_open">Abrir transferencia</string>
+</resources>

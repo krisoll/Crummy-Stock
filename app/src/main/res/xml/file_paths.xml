@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Exports written to the app-specific external directory on Android 9 and below. -->
+    <external-files-path
+        name="exports"
+        path="exports/" />
+    <cache-path
+        name="cache"
+        path="/" />
+</paths>

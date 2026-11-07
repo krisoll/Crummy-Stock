@@ -1,35 +1,45 @@
-# Gradle files
-.gradle/
-build/
-.kotlin/
+# ---------------------------------------------------------------------------
+# Build output
+# ---------------------------------------------------------------------------
+/build
+/app/build
+/captures
+.externalNativeBuild
+.cxx
 
-# Local configuration file (sdk path, etc)
+# ---------------------------------------------------------------------------
+# Gradle / Kotlin
+# ---------------------------------------------------------------------------
+.gradle
+.kotlin
 local.properties
 
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.aab
-*.apk
-output-metadata.json
-
-# IntelliJ
-*.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
-
-# Keystore files
+# ---------------------------------------------------------------------------
+# Secrets — never commit these
+# ---------------------------------------------------------------------------
+# Release signing. This holds the password to the key that identifies the app on
+# every device it is installed on. Committing it hands anyone the ability to
+# publish updates as the author, and the key cannot be changed afterwards.
+# See CONTRIBUTING.md for how to build a release locally.
+keystore.properties
 *.jks
 *.keystore
+*.p12
+*.pfx
 
-# Google Services (e.g. APIs or Firebase)
-google-services.json
+# ---------------------------------------------------------------------------
+# IDE
+# ---------------------------------------------------------------------------
+# Intentional: .idea is tracked (see .idea/.gitignore) so that code style and
+# inspection profiles travel with the repository. Only the machine-specific
+# files are excluded, by .idea/.gitignore itself.
+*.iml
+.DS_Store
 
-# Android Profiling
-*.hprof
+# ---------------------------------------------------------------------------
+# Loose scratch files
+# ---------------------------------------------------------------------------
+# Case-insensitive so Data.txt, data.txt and DATA.TXT are all caught. A
+# scratch file called "Data.txt" once held the release keystore password.
+[Dd][Aa][Tt][Aa].[Tt][Xx][Tt]
+*.log

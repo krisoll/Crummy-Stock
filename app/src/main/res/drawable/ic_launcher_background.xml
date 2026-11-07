@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The adaptive icon's background layer: a flat colour sampled from the artwork's own
+  light blue, so the padding the mask adds around the character blends into the drawing
+  rather than reading as a separate frame.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#4FE0EA" />
+</shape>

@@ -1,0 +1,47 @@
+CrummyStock
+===========
+
+Copyright (c) 2026 Krisoll
+Licensed under the GNU Affero General Public License v3.0 (see LICENSE).
+
+
+Original artwork
+----------------
+
+The image assets in app/src/main/assets/crummy_stock/ (the sale animation
+parts, and crummy_stock.json which references them) were created by Krisoll
+and are covered by the same AGPL-3.0 licence as the rest of the repository.
+They are not third-party stock assets and carry no separate attribution
+requirement.
+
+
+Bundled fonts
+-------------
+
+The eight typefaces in app/src/main/res/font are all from Google Fonts and are
+distributed under the SIL Open Font License 1.1 (OFL-1.1), which permits
+bundling and redistribution inside an application. The full licence text for
+each ships inside the APK at assets/font-licences/:
+
+    darumadrop_one.ttf       Darumadrop One     -> OFL_DarumadropOne.txt
+    charissil_bold.ttf       Charis SIL         -> OFL_CharisSIL.txt
+    charissil_regular.ttf    Charis SIL         -> OFL_CharisSIL.txt
+    coiny_regular.ttf        Coiny              -> OFL_Coiny.txt
+    enriqueta_bold.ttf       Enriqueta          -> OFL_Enriqueta.txt
+    hennypenny_regular.ttf   HennyPenny         -> OFL_HennyPenny.txt
+    lacquer_regular.ttf      Lacquer            -> OFL_Lacquer.txt
+    limelight_regular.ttf    Limelight          -> OFL_Limelight.txt
+
+"Charis SIL" is itself derived from Bitstream Charter, whose copyright notice
+is carried in the same file.
+
+
+Third-party libraries
+---------------------
+
+This app depends on AndroidX / Jetpack Compose, Room, CameraX, ML Kit barcode
+scanning, Coil, Lottie, ZXing and Accompanist. These are licensed under the
+Apache License 2.0 unless an artefact states otherwise. Exact versions are
+pinned in gradle/libs.versions.toml; run `./gradlew app:dependencies` for the
+resolved graph, or use a tool such as the OSS Licenses Gradle plugin to
+generate a full attribution list if you redistribute modified builds.

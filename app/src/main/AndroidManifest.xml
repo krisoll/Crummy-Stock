@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!--
+        Optional haptic feedback for scanning. A normal (non-dangerous) permission, so it is
+        granted at install time with no prompt, and the app works fine on devices that cannot
+        vibrate at all — the scanner simply loses its buzz.
+    -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!--
+        Backup transfer only. The app talks to no server and collects nothing: these two exist so a
+        backup can be pushed to, or pulled from, another device on the same Wi-Fi network when the
+        user explicitly opens the transfer screen. There is no analytics, no crash reporting and no
+        remote sync anywhere in the app.
+
+        INTERNET is also what allows a listening socket, which is why the transfer server is bound
+        to the lifetime of one screen rather than running in the background.
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!--
+        Android 17 (API 37) blocks apps that target 37 from reaching the local network until
+        the user grants this runtime permission. It lives in the NEARBY_DEVICES group, so a
+        device that already granted another nearby-devices permission is not prompted again.
+        The transfer screen requests it when it opens; INTERNET alone is not enough on 17+.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_LOCAL_NETWORK" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="false" />
+
+    <application
+        android:name=".StockApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StockApplication">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.StockApplication"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

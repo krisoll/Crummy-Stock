@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:locale="en">
+
+    <!-- App -->
+    <!-- The launcher label. Not translatable: it is the app's name, not a phrase. -->
+    <string name="app_name" translatable="false">CrummyStock</string>
+
+    <!-- Bottom navigation destinations -->
+    <string name="nav_inventory">Inventory</string>
+    <string name="nav_scan">Scan</string>
+    <string name="nav_sales">Sales</string>
+    <string name="nav_history">History</string>
+    <string name="nav_supplies">Supplies</string>
+    <string name="nav_settings">Config</string>
+
+    <!-- Common actions -->
+    <string name="action_cancel">Cancel</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_save">Save</string>
+    <string name="action_back">Back</string>
+    <string name="action_scan">Scan</string>
+    <string name="action_reset">Reset</string>
+
+    <!-- Inventory screen -->
+    <string name="inventory_add_product">Add product</string>
+    <string name="inventory_search_placeholder">Search name or barcode</string>
+    <string name="inventory_filter_all">All (%1$d)</string>
+    <string name="inventory_filter_low">Low</string>
+    <string name="inventory_filter_out">Out</string>
+    <string name="inventory_summary_items">Items</string>
+    <string name="inventory_summary_units">Units</string>
+    <string name="inventory_summary_value">Value</string>
+    <string name="inventory_quantity">Qty %1$d</string>
+    <string name="inventory_quick_add_one">+1</string>
+    <string name="inventory_quick_remove_one">-1</string>
+    <string name="inventory_empty_title">No products yet</string>
+    <string name="inventory_empty_body">Tap \u201CAdd product\u201D to register your first item.</string>
+    <string name="inventory_no_matches_title">Nothing matches your filters</string>
+    <string name="inventory_no_matches_body">Try clearing the search or choosing a different filter.</string>
+
+    <!-- Product editor -->
+    <string name="product_edit_title">Edit product</string>
+    <string name="product_new_title">New product</string>
+    <string name="product_barcode_label">Barcode / QR value</string>
+    <string name="product_barcode_locked">The barcode of an existing product cannot be changed</string>
+    <string name="product_name_label">Product name</string>
+    <string name="product_price_label">Unit price</string>
+    <string name="product_price_stored">Stored as %1$s</string>
+    <string name="product_price_hint">Enter a price such as 12.99</string>
+    <string name="product_quantity_edit_label">Quantity in stock</string>
+    <string name="product_quantity_new_label">Initial quantity</string>
+    <string name="product_export_qr">  Export QR code image</string>
+    <string name="product_qr_help">Saves a printable PNG of the QR code alone to your export folder.</string>
+    <string name="product_scanner_help">On Android the scanner also recognises EAN/UPC labels, so ordinary product barcodes work as well as QR codes.</string>
+    <string name="product_delete_dialog_title">Delete product?</string>
+    <string name="product_delete_dialog_body">%1$s and its sales history will be removed.</string>
+
+    <!-- Product photo -->
+    <string name="product_image_label">Photo</string>
+    <string name="product_image_choose">Add photo</string>
+    <string name="product_image_change">Change photo</string>
+    <string name="product_image_remove">Remove photo</string>
+    <string name="product_image_help">Pick a photo from your gallery or take one with the camera. It is saved inside the app.</string>
+    <string name="product_image_failed">Could not use that photo</string>
+    <string name="product_image_source_title">Add photo</string>
+    <string name="product_image_source_camera">Take photo</string>
+    <string name="product_image_source_gallery">Choose from gallery</string>
+    <string name="photo_capture_hint">Tap the button to take the photo</string>
+    <string name="photo_capture_failed">Could not take the photo</string>
+    <string name="photo_capture_permission_rationale">Camera access is needed to take a product photo.</string>
+
+    <!-- Scanner -->
+    <string name="scan_mode_sell">Sell</string>
+    <string name="scan_mode_add_stock">Add stock</string>
+    <string name="scan_hint_sell">Point the camera at the product QR code to sell one unit</string>
+    <string name="scan_hint_stock_in">Scan a product to add one unit back to stock</string>
+    <string name="scanner_permission_rationale">Camera access is needed to scan product QR codes.</string>
+    <string name="scanner_grant_camera_access">Grant camera access</string>
+
+    <!-- Sales history -->
+    <string name="sales_total">Sales total</string>
+    <plurals name="sales_units">
+        <item quantity="one">%d unit</item>
+        <item quantity="other">%d units</item>
+    </plurals>
+    <plurals name="sales_transactions">
+        <item quantity="one">%d transaction</item>
+        <item quantity="other">%d transactions</item>
+    </plurals>
+    <plurals name="sales_active_days">
+        <item quantity="one">%d active day</item>
+        <item quantity="other">%d active days</item>
+    </plurals>
+    <string name="sales_empty_title">No sales yet</string>
+    <string name="sales_empty_body">Scan a product QR code to record your first sale.</string>
+    <string name="sales_day_summary">%1$d sales \u00B7 %2$d units</string>
+    <string name="sales_export_day">Export %1$s</string>
+    <string name="sales_collapse">Collapse</string>
+    <string name="sales_expand">Expand</string>
+    <string name="sales_quantity_times_price">%1$d \u00D7 %2$s</string>
+    <string name="sales_cancel_of">Cancel sale of %1$s</string>
+    <string name="sales_cancel_dialog_title">Cancel this sale?</string>
+    <string name="sales_cancel_dialog_body">%1$d \u00D7 %2$s (%3$s) will be removed from the sales log and the units will be returned to inventory.</string>
+    <string name="sales_cancel_confirm">Cancel sale</string>
+    <string name="sales_cancel_order_body">%1$d item(s) totalling %2$s will be removed from the history and the stock will be returned to inventory.</string>
+    <string name="sales_cancel_keep">Keep</string>
+
+    <!-- Day labels -->
+    <string name="day_today">Today</string>
+    <string name="day_yesterday">Yesterday</string>
+    <string name="date_short">%1$s</string>
+
+    <!-- Settings -->
+    <string name="settings_export_location">Export location</string>
+    <string name="settings_default_folder" translatable="false">Downloads</string>
+    <string name="settings_export_location_description">Where CSV files and QR label images are saved.</string>
+    <string name="settings_export_folder_selected">Files are written to the folder you selected</string>
+    <string name="settings_export_folder_default">Using the device %1$s folder</string>
+    <string name="settings_choose_folder">Choose folder</string>
+    <string name="settings_export_fallback">If the selected folder becomes unavailable, exports fall back to %1$s automatically.</string>
+
+    <!-- Personalize page (reached from Config) -->
+    <string name="settings_personalize">Personalize</string>
+    <string name="settings_personalize_description">Colours, sounds, text and animations.</string>
+    <string name="settings_personalize_open">Personalize</string>
+    <string name="settings_personalize_open_description">Change the colours, sounds, text and animations.</string>
+
+    <!-- Sounds sub-page (reached from Personalize) -->
+    <string name="settings_sounds_open">Sounds</string>
+    <string name="settings_sounds_open_description">Scan beep, sale sound, vibration and the scan popup.</string>
+    <string name="settings_sounds">Sounds</string>
+    <string name="settings_sounds_description">Everything the app plays or buzzes when you scan and when you sell.</string>
+
+    <!-- Text sub-page (reached from Personalize) -->
+    <string name="settings_text_open">Text</string>
+    <string name="settings_text_open_description">Typeface and text size.</string>
+    <string name="settings_text">Text</string>
+    <string name="settings_text_description">The typeface and how large the text is drawn.</string>
+    <string name="settings_text_size">Text size</string>
+    <string name="settings_text_size_description">Scales all the text in the app, with every screen keeping its proportions.</string>
+    <string name="settings_text_size_small">Small</string>
+    <string name="settings_text_size_normal">Normal</string>
+    <string name="settings_text_size_large">Large</string>
+
+    <!-- Animations sub-page (reached from Personalize) -->
+    <string name="settings_animations_open">Animations</string>
+    <string name="settings_animations_open_description">Transition speed, the startup screen and the sale animation.</string>
+    <string name="settings_animations">Animations</string>
+    <string name="settings_animations_description">How the app moves: transitions, the startup screen and the sale flourish.</string>
+
+    <!-- Colour settings sub-page (reached from Personalize) -->
+    <string name="settings_colours">Colour settings</string>
+    <string name="settings_colours_description">Background, buttons, panels, text and highlights.</string>
+    <string name="settings_colours_open">Colour settings</string>
+    <string name="settings_colours_open_description">Background, button, panel, text and highlight colours.</string>
+    <string name="settings_colours_pending">Unapplied colour changes</string>
+
+    <!-- Colour themes -->
+    <string name="settings_themes">Themes</string>
+    <string name="settings_themes_description">Ready-made palettes, or your own saved sets of all four colours. Picking one applies it straight away.</string>
+    <string name="settings_themes_builtin">Built-in</string>
+    <string name="settings_themes_saved">Your themes</string>
+    <string name="settings_themes_empty">No saved themes yet. Set the four colours below, then save them as a theme.</string>
+    <string name="settings_themes_save">Save current colours as a theme</string>
+    <string name="settings_themes_save_hint">Saves the four colours shown below under one name.</string>
+    <string name="settings_themes_name_label">Theme name</string>
+    <string name="settings_themes_name_placeholder">e.g. Shop green</string>
+    <string name="settings_themes_delete">Delete theme</string>
+    <string name="settings_themes_delete_confirm_title">Delete this theme?</string>
+    <string name="settings_themes_delete_confirm_body">"%1$s" will be removed from your themes. The colours currently in use stay exactly as they are.</string>
+    <string name="settings_themes_applied">%1$s applied</string>
+    <string name="settings_themes_active">In use</string>
+
+    <!-- Built-in theme names -->
+    <string name="theme_default">Default</string>
+    <string name="theme_sage">Sage</string>
+    <string name="theme_sunset">Sunset</string>
+    <string name="theme_midnight">Midnight</string>
+    <string name="theme_ocean">Ocean</string>
+
+    <string name="settings_background_colour">Background colour</string>
+    <string name="settings_background_colour_description">Replaces the app background and the panels that hold list items.</string>
+    <string name="settings_custom_background">Custom background</string>
+    <string name="settings_button_colour">Button colour</string>
+    <string name="settings_button_colour_description">Used by buttons, chips, the floating action button and highlights.</string>
+    <string name="settings_custom_button_colour">Custom button colour</string>
+    <string name="settings_panel_colour">Panel colour</string>
+    <string name="settings_panel_colour_description">The cards and sections that sit on top of the background.</string>
+    <string name="settings_custom_panel_colour">Custom panel colour</string>
+    <string name="settings_text_colour">Text colour</string>
+    <string name="settings_text_colour_description">Used for every label, value and heading in the app.</string>
+    <string name="settings_custom_text_colour">Custom text colour</string>
+    <string name="settings_highlight_colour">Highlight colour</string>
+    <string name="settings_highlight_colour_description">Used for selected filters, the selected tab indicator and emphasised headings.</string>
+    <string name="settings_custom_highlight_colour">Custom highlight colour</string>
+    <string name="settings_font">Font</string>
+    <string name="settings_font_description">Changes the typeface used throughout the app.</string>
+    <string name="settings_font_default">Default</string>
+    <string name="settings_font_sans">Sans serif</string>
+    <string name="settings_font_serif">Serif</string>
+    <string name="settings_font_monospace">Monospace</string>
+    <string name="settings_font_cursive">Cursive</string>
+    <string name="settings_preview">Preview</string>
+    <string name="settings_preview_product">Coffee beans</string>
+    <string name="settings_preview_quantity">Qty 12</string>
+    <string name="settings_preview_button">Button</string>
+    <string name="settings_preview_outlined_button">Outlined</string>
+    <string name="settings_pending_title">Colour changes are not applied yet</string>
+    <string name="settings_pending_body">Previewing is kept separate from applying so the picker stays smooth. Tap Apply to use these colours across the app.</string>
+    <string name="settings_discard">Discard</string>
+    <string name="settings_apply_colours">Apply colours</string>
+    <string name="settings_reset_colours">  Reset to the default colours</string>
+    <string name="settings_back_to_personalize">Back to Personalize</string>
+    <string name="settings_storage_note">Inventory data is stored on this device only.</string>
+
+    <!-- Social links at the foot of the Config page -->
+    <string name="settings_social_title">Follow me on my socials</string>
+    <string name="settings_social_website">Website</string>
+    <string name="settings_social_instagram">Instagram</string>
+    <string name="settings_social_x">X</string>
+    <!-- Spoken by TalkBack; %1$s is the network name. -->
+    <string name="settings_social_open">Open %1$s (@krisoll)</string>
+    <!-- TalkBack label for the website, which has no @handle to read out. -->
+    <string name="settings_social_open_website">Open website</string>
+
+    <!-- Full JSON data backup -->
+    <string name="settings_backup_title">Data backup</string>
+    <string name="settings_backup_description">Exports the entire database — categories, products, orders and every sale line — as a single JSON file, and restores it again.</string>
+    <string name="settings_backup_export">Export backup</string>
+    <string name="settings_backup_share">Share…</string>
+    <string name="settings_backup_note">The file contains raw values (cents, basis points, epoch milliseconds) so another program can read it without guessing. Use Share to send it straight to a computer.</string>
+
+    <!-- Importing a backup back in -->
+    <string name="settings_backup_import">Import backup…</string>
+    <string name="import_picker_title">Choose a backup file</string>
+    <string name="import_confirm_title">Import this backup?</string>
+    <string name="import_confirm_file">File</string>
+    <string name="import_confirm_summary">It contains %1$d categories, %2$d products, %3$d orders and %4$d sale lines.</string>
+    <string name="import_confirm_summary_supplies">Supplies: %1$d providers, %2$d materials, %3$d entries and %4$d entry lines.</string>
+    <string name="import_confirm_summary_promos">Promos: %1$d rules.</string>
+    <string name="import_confirm_exported">Exported %1$s</string>
+    <string name="import_confirm_exported_unknown">Exported date unknown</string>
+    <string name="import_confirm_warning">Restoring overwrites the stock quantities, products, orders and sales currently on this device. Your appearance and language settings are left alone.</string>
+    <string name="import_confirm_warning_partial">Some rows in the file could not be read and will be skipped: %1$s</string>
+    <string name="import_confirm_restore_settings">Also restore settings</string>
+    <string name="import_confirm_restore_settings_note">Replaces this phone\'s colours, font, text size, language, startup screen and scanner sound settings with the ones in the backup.</string>
+    <string name="import_confirm_restore_settings_device">The export folder and any custom sound or startup image files stay as they are on this device — they live here, not in the file.</string>
+    <string name="import_confirm_restore">Restore</string>
+    <string name="import_confirm_cancel">Cancel</string>
+    <string name="import_nothing_to_import">That backup has no categories, products or sales in it.</string>
+    <string name="import_reading">Reading backup…</string>
+
+    <!-- Motion -->
+    <string name="settings_motion">Animations</string>
+    <string name="settings_motion_description">How quickly screens and panels transition. Turn this off to remove every animation.</string>
+    <string name="settings_motion_off">Off</string>
+    <string name="settings_motion_fast">Fast</string>
+    <string name="settings_motion_normal">Normal</string>
+    <string name="settings_motion_slow">Slow</string>
+
+    <!-- Startup (loading) screen -->
+    <string name="settings_loading_screen">Startup screen</string>
+    <string name="settings_loading_screen_description">The spinning icon shown while the app loads.</string>
+    <string name="settings_loading_screen_enabled">Show the startup screen</string>
+    <string name="settings_loading_image">Your own picture</string>
+    <string name="settings_loading_image_description">Pick a PNG or JPG from your device. A logo or icon with a transparent background works best.</string>
+    <string name="settings_loading_image_choose">Choose picture</string>
+    <string name="settings_loading_image_change">Change picture</string>
+    <string name="settings_loading_image_failed">Could not use that picture</string>
+    <string name="settings_loading_animation">Use an animation</string>
+    <string name="settings_loading_animation_description">A Lottie animation (.json or .lottie) plays on its own, so the spin and circle settings do not apply to it. If the file holds several animations, the first one is used.</string>
+    <string name="settings_loading_animation_bundled">Using the built-in animation</string>
+    <string name="settings_loading_animation_custom">Using your own animation</string>
+    <string name="settings_loading_animation_choose">Choose animation</string>
+    <string name="settings_loading_animation_change">Change animation</string>
+    <string name="settings_loading_animation_remove">Use a picture instead</string>
+    <string name="settings_loading_animation_failed">That file is not a Lottie animation</string>
+
+    <string name="settings_loading_icon">Or pick an icon</string>
+    <string name="settings_loading_icon_description">Used when no picture is chosen.</string>
+    <string name="settings_loading_spin">Motion</string>
+    <string name="settings_loading_preview">Preview</string>
+    <string name="settings_loading_reset">  Reset the startup screen</string>
+    <string name="loading_icon_cart">Cart</string>
+    <string name="loading_icon_inventory">Barcode box</string>
+    <string name="loading_icon_receipt">Receipt</string>
+    <string name="loading_icon_box">Box</string>
+    <string name="loading_icon_store">Storefront</string>
+    <string name="loading_icon_barcode">Scanner</string>
+    <string name="loading_icon_tag">Price tag</string>
+    <string name="loading_icon_money">Payments</string>
+    <string name="loading_icon_trending">Trending up</string>
+    <string name="loading_icon_settings">Settings</string>
+    <string name="loading_spin_none">Still</string>
+    <string name="loading_spin_clockwise">Spin</string>
+    <string name="loading_spin_counter_clockwise">Reverse spin</string>
+    <string name="loading_spin_pendulum">Rock</string>
+    <string name="loading_spin_pulse">Pulse</string>
+    <string name="loading_spin_bounce">Bounce</string>
+    <string name="loading_spin_slide">Slide across</string>
+    <string name="loading_spin_slide_pause">Slide and pause</string>
+    <string name="loading_screen_skip">Loading</string>
+    <string name="loading_circle_none">None</string>
+    <string name="loading_circle_soft">Soft</string>
+    <string name="loading_circle_solid">Solid</string>
+    <string name="loading_circle_outline">Outline</string>
+    <string name="loading_circle_panel">Panel</string>
+    <string name="settings_loading_image_size">Image size</string>
+    <string name="settings_loading_circle_size">Circle size</string>
+    <string name="settings_loading_size_value">%1$d dp</string>
+    <string name="settings_loading_circle">Background circle</string>
+    <string name="settings_loading_circle_description">The disc drawn behind your image. None places the image directly on the background.</string>
+    <string name="settings_loading_image_gif_hint">Animated GIFs play as well as still images.</string>
+    <string name="settings_loading_image_gif_failed">That GIF could not be used. Try a smaller one.</string>
+
+    <!-- Scanner feedback (Personalize page) -->
+    <string name="settings_scanner">Scanner</string>
+    <string name="settings_scanner_description">The beep, the popup and how often the camera accepts a scan.</string>
+    <string name="settings_scan_beep_enabled">Beep when an item is scanned</string>
+    <string name="settings_scan_beep">Beep sound</string>
+    <string name="settings_scan_beep_description">Tap a sound to hear it. Pick your own file to use anything on the device.</string>
+    <string name="settings_scan_beep_classic">Classic till beep</string>
+    <string name="settings_scan_beep_chirp">Rising chirp</string>
+    <string name="settings_scan_beep_click">Soft click</string>
+    <string name="settings_scan_beep_blip">Low blip</string>
+    <string name="settings_scan_beep_digital">Digital triple</string>
+    <string name="settings_scan_beep_own">Your own sound</string>
+    <string name="settings_scan_beep_choose">Choose sound</string>
+    <string name="settings_scan_beep_change">Change sound</string>
+    <string name="settings_scan_beep_remove">Use a built-in sound</string>
+    <string name="settings_scan_beep_failed">Could not use that sound</string>
+    <string name="settings_scan_beep_custom_active">Using your own sound file</string>
+    <string name="settings_scan_section">Scanner</string>
+    <string name="settings_scan_section_description">How the camera behaves while it is open.</string>
+    <string name="settings_scan_delay">Same product</string>
+    <string name="settings_scan_delay_description">How long before the label already in front of the camera can be counted again. Keep this high so one product is not added twice.</string>
+    <string name="settings_product_change_delay">Different product</string>
+    <string name="settings_product_change_delay_description">How long before the next product can be read. Keep this short so working through a basket stays quick.</string>
+    <string name="settings_scan_delay_value">%1$s s</string>
+    <string name="settings_scan_popup">Show the scanned product</string>
+    <string name="settings_scan_popup_description">A small banner over the camera with the product name and its photo.</string>
+    <string name="settings_scan_vibration">Vibration</string>
+    <string name="settings_scan_vibration_enabled">Vibrate when an item is scanned</string>
+    <string name="settings_scan_vibration_pattern">Vibration pattern</string>
+    <string name="settings_scan_vibration_description">Tap a pattern to feel it. Useful in a noisy shop where the beep is hard to hear.</string>
+    <string name="settings_scan_vibration_duration">%1$s long</string>
+    <string name="settings_scan_vibration_tap">Single tap</string>
+    <string name="settings_scan_vibration_double">Double tap</string>
+    <string name="settings_scan_vibration_thump">Firm thump</string>
+    <string name="settings_scan_vibration_buzz">Long buzz</string>
+    <string name="settings_scan_vibration_heartbeat">Heartbeat</string>
+
+    <!-- Sale sound (Personalize page) -->
+    <string name="settings_sale_sound">Sale sound</string>
+    <string name="settings_sale_sound_description">Plays when a sale is paid for. Tap a sound to hear it, or pick your own file.</string>
+    <string name="settings_sale_sound_enabled">Play a sound when a sale is completed</string>
+    <string name="settings_sale_sound_list">Sale sound</string>
+    <string name="settings_sale_sound_cash_register">Cash register</string>
+    <string name="settings_sale_sound_chime">Soft chime</string>
+    <string name="settings_sale_sound_ascending">Rising notes</string>
+    <string name="settings_sale_sound_bell">Bell</string>
+    <string name="settings_sale_sound_coins">Coins</string>
+    <string name="settings_sale_sound_success">Success fanfare</string>
+    <string name="settings_sale_sound_own">Your own sound</string>
+    <string name="settings_sale_sound_choose">Choose sound</string>
+    <string name="settings_sale_sound_change">Change sound</string>
+    <string name="settings_sale_sound_remove">Use a built-in sound</string>
+    <string name="settings_sale_sound_failed">Could not use that sound</string>
+    <string name="settings_sale_sound_custom_active">Using your own sound file</string>
+    <string name="settings_sale_animation">Sale animation</string>
+    <string name="settings_sale_animation_description">The picture shown when a sale is completed. Tap one to preview it.</string>
+    <string name="settings_sale_animation_thumbs_up">Thumbs up</string>
+    <string name="settings_sale_animation_check">Check mark</string>
+    <string name="settings_sale_animation_star">Star</string>
+    <string name="settings_sale_animation_money">Money box</string>
+    <string name="settings_sale_animation_celebration">Celebration</string>
+    <string name="settings_sale_animation_receipt">Receipt</string>
+    <string name="settings_sale_animation_medal">Medal</string>
+    <string name="settings_sale_animation_size">Animation size</string>
+    <string name="settings_sale_animation_size_description">How large the picture is on the receipt.</string>
+    <string name="settings_sale_animation_size_value">%1$d dp</string>
+    <string name="settings_sale_animation_own">Your own animation</string>
+    <string name="settings_sale_animation_own_description">Import a Lottie file (.json or .lottie) to use instead of the pictures above. It plays on the receipt in place of them. If the file holds several animations, the first one is used.</string>
+    <string name="settings_sale_animation_custom_active">Using your own animation</string>
+    <string name="settings_sale_animation_choose">Choose animation</string>
+    <string name="settings_sale_animation_change">Change animation</string>
+    <string name="settings_sale_animation_remove">Use a built-in animation</string>
+    <string name="settings_sale_animation_failed">That file is not a Lottie animation</string>
+    <string name="settings_sale_animation_preview">Preview — how it looks on the receipt</string>
+    <string name="settings_sale_animation_replay">Replay the animation</string>
+    <string name="settings_sale_receipt_background">Darken the background</string>
+    <string name="settings_sale_receipt_background_description">Fades the screen to black behind the receipt so the amount stands out.</string>
+    <string name="settings_sale_scrim_strength">Darkness</string>
+    <string name="settings_sale_scrim_strength_value">%1$s%%</string>
+    <string name="settings_scan_vibration_strength">Strength</string>
+    <string name="settings_scan_vibration_strength_description">How hard the phone buzzes. Not every device can change this.</string>
+    <string name="settings_scan_vibration_strength_value">%1$d%%</string>
+    <string name="settings_scan_vibration_unsupported">This device has no vibration motor, so this setting has no effect here.</string>
+    <string name="settings_scanner_reset">  Reset the sound and vibration settings</string>
+
+    <!-- Scanner banner -->
+    <string name="scanner_banner_unknown">Unknown barcode</string>
+    <string name="scanner_banner_in_cart">In the cart · %1$d</string>
+    <string name="scanner_banner_unknown_barcode">%1$s · not in inventory</string>
+
+    <!-- Colour picker -->    <string name="colour_picker_square_description">Saturation %1$d percent, brightness %2$d percent</string>
+    <string name="colour_picker_hue_label">Hue</string>
+    <string name="colour_picker_hue_description">Hue %1$d degrees</string>
+    <string name="colour_picker_hex_label">Hex</string>
+    <string name="colour_picker_hex_error">Enter 6 hex digits, e.g. 6750A4</string>
+    <string name="colour_picker_readout">Hue %1$d\u00B0 \u00B7 Saturation %2$d%% \u00B7 Brightness %3$d%%</string>
+
+    <!-- Snackbar messages -->
+    <!-- Shown on the busy overlay while a slow export runs -->
+    <string name="export_in_progress_csv">Exporting CSV…</string>
+    <string name="export_in_progress_json">Exporting backup…</string>
+    <string name="export_in_progress_pdf">Building report…</string>
+    <string name="export_in_progress_qr">Creating QR code…</string>
+    <string name="export_in_progress_default">Working…</string>
+    <string name="message_saved_to_folder">Saved %1$s to %2$s</string>
+    <string name="message_export_failed">Export failed: %1$s</string>
+    <string name="message_unknown_error">unknown error</string>
+    <string name="message_add_barcode_first">Add a barcode first</string>
+    <string name="message_folder_selected">Exports will be saved to the selected folder</string>
+    <string name="message_folder_unavailable">Could not keep access to that folder</string>
+    <string name="message_folder_selected_session">Exports will be saved to that folder until the app restarts</string>
+    <string name="message_import_replaced">Backup restored · %1$d rows written</string>
+    <string name="message_import_merged">Backup merged · %1$d rows added</string>
+    <string name="message_import_partial">Imported %1$d rows · %2$d skipped</string>
+    <string name="message_import_failed">Import failed: %1$s</string>
+    <string name="message_colours_applied">Colour settings applied</string>
+    <string name="message_stock_added">Added %1$d \u00D7 %2$s</string>
+    <string name="message_stock_restocked">+%1$d stock for %2$s</string>
+    <string name="message_sold_one">Sold 1 \u00D7 %1$s \u00B7 %2$d left</string>
+    <string name="message_out_of_stock">%1$s is out of stock</string>
+    <string name="message_barcode_not_found">No product for barcode %1$s</string>
+    <string name="message_sale_cancelled">Cancelled sale: +%1$d back to %2$s</string>
+    <string name="message_order_cancelled">Sale cancelled · %1$d item(s) returned to stock</string>
+    <string name="message_stock_removed">Removed %1$d from %2$s</string>
+
+    <!-- Categories -->
+    <string name="category_label">Category</string>
+    <string name="category_none">No category</string>
+    <string name="category_all">All</string>
+    <string name="category_uncategorised">Uncategorised</string>
+    <string name="category_new">New category</string>
+    <string name="category_new_hint">Category name</string>
+    <string name="category_add">Add</string>
+    <string name="category_delete">Delete category</string>
+    <string name="category_delete_body">Products in this category stay in inventory but become uncategorised.</string>
+    <string name="category_edit_title">Categories</string>
+    <string name="category_edit_description">Rename, add or delete the categories used to group your products.</string>
+    <string name="category_edit_empty">No categories yet. Add one below.</string>
+    <!-- Tags (optional second classification, off by default) -->
+    <string name="settings_tags_section">Tags</string>
+    <string name="settings_tags_section_description">A second way to label products, independent of their category.</string>
+    <string name="settings_tags_enabled">Show tags</string>
+    <string name="settings_tags_enabled_note">A product can carry several tags — fragile, clearance, to restock — where it has only one category. Hidden until you switch this on; anything you tag is kept if you switch it off again.</string>
+
+    <string name="tags_title">Tags</string>
+    <string name="tags_description">Labels you can put on any product. A product can have several.</string>
+    <string name="tag_new_label">New tag</string>
+    <string name="tag_add">Add tag</string>
+    <string name="tag_empty">No tags yet. Add one above to start labelling products.</string>
+    <string name="tag_rename">Rename</string>
+    <string name="tag_rename_label">Tag name</string>
+    <string name="tag_rename_empty">Enter a tag name</string>
+    <string name="tag_rename_duplicate">A tag called \"%1$s\" already exists</string>
+    <string name="tag_product_count">%1$d product(s)</string>
+    <string name="tag_delete">Delete</string>
+    <string name="tag_delete_title">Delete this tag?</string>
+    <string name="tag_delete_body">\"%1$s\" will be removed from every product it is on. The products themselves are not deleted.</string>
+    <string name="tags_menu">Manage tags</string>
+    <string name="product_tags_label">Tags</string>
+    <string name="product_tags_description">Optional labels for this product. Several can be selected.</string>
+    <string name="product_tags_none">No tags yet — create some from the inventory settings.</string>
+    <string name="inventory_tag_filter">Filter by tag</string>
+
+    <string name="category_rename">Rename</string>
+    <string name="category_rename_label">Category name</string>
+    <string name="category_rename_empty">Enter a category name</string>
+    <string name="category_rename_duplicate">A category called \"%1$s\" already exists</string>
+    <string name="category_product_count">%1$d product(s)</string>
+    <string name="category_menu">Inventory settings</string>
+    <string name="category_menu_edit">Edit categories</string>
+
+    <!-- History export -->
+    <string name="sales_export_csv">Export CSV</string>
+    <string name="sales_export_day_csv">Export this day\'s CSV</string>
+    <string name="sales_report">Report</string>
+    <string name="sales_report_title">Daily report</string>
+    <string name="sales_report_close">Close report</string>
+    <string name="sales_report_orders">Sales</string>
+    <string name="sales_report_items">Items</string>
+    <string name="sales_report_gross">Gross</string>
+    <string name="sales_report_tax">Tax</string>
+    <string name="sales_report_card_fee">Card fee</string>
+    <string name="sales_report_card_fee_fixed">Fixed card fee</string>
+    <string name="sales_report_net">Net</string>
+    <string name="sales_report_best_sellers">Best sellers</string>
+    <string name="sales_report_by_hour">Revenue by hour</string>
+    <string name="sales_report_payment_split">Payment split</string>
+    <string name="sales_report_export_pdf">Export day PDF</string>
+    <string name="sales_report_export_csv">Export day CSV</string>
+    <string name="sales_report_empty">No sales on this day</string>
+
+    <!-- Daily report PDF -->
+    <string name="sales_report_company">CrummyStock</string>
+    <string name="sales_report_units_sold_chart">Quantity Sold</string>
+    <string name="sales_report_total_sales_chart">Total Sales</string>
+    <string name="sales_report_item_sold_chart">Item Sold</string>
+    <string name="sales_report_table_items">Item name</string>
+    <string name="sales_report_table_price">Price</string>
+    <string name="sales_report_table_qty">Qty</string>
+    <string name="sales_report_table_amount">Amount</string>
+    <string name="sales_report_table_tax_rate">Tax rate</string>
+    <string name="sales_report_table_tax">Tax</string>
+    <string name="sales_report_table_card_fee">Card fee</string>
+    <string name="sales_report_table_total">Net</string>
+    <string name="sales_report_table_grand_total">Total</string>
+    <string name="sales_report_notes">Notes:</string>
+    <string name="sales_report_note_total">A total of %1$s was taken across %2$d sales today.</string>
+    <string name="sales_report_note_best_seller">The best seller was %1$s, with %2$d units contributing %3$s.</string>
+    <string name="sales_report_note_busiest_hour">The busiest hour was %1$s, taking %2$s.</string>
+    <string name="sales_report_mixed_rate" translatable="false">–</string>
+    <string name="sales_report_table_more">+%1$d more products</string>
+    <string name="sales_report_units_sold">%1$d units</string>
+    <string name="sales_export_all">Export all sales</string>
+    <string name="message_sale_product_missing">Sale removed, but %1$s no longer exists so its stock was not restored</string>
+    <string name="message_sale_not_found">That sale no longer exists</string>
+    <string name="message_could_not_save">Could not save</string>
+    <string name="message_could_not_delete">Could not delete</string>
+    <string name="message_could_not_cancel_sale">Could not cancel sale</string>
+    <string name="message_could_not_restock">Could not restock</string>
+    <string name="message_product_saved">Saved %1$s</string>
+    <string name="message_product_deleted">Deleted %1$s</string>
+
+    <!-- Repository validation errors -->
+    <string name="error_barcode_empty">Barcode cannot be empty</string>
+    <string name="error_name_empty">Name cannot be empty</string>
+    <string name="error_quantity_positive">Quantity must be at least 1</string>
+    <string name="error_could_not_restock_product">Could not restock %1$s</string>
+
+    <!-- Language selection -->
+    <string name="settings_language">Language</string>
+    <string name="settings_language_description">Choose the language used by the app.</string>
+    <string name="language_system">System default</string>
+    <string name="language_english">English</string>
+    <string name="language_spanish">Español</string>
+
+    <!-- Collapsible colour sections -->
+    <string name="settings_font_darumadrop">Darumadrop One</string>
+    <string name="settings_font_charaisilbold">Charisil Bold</string>
+    <string name="settings_font_charaisilregular">Charisil Regular</string>
+    <string name="settings_font_coiny">Coiny</string>
+    <string name="settings_font_enriqueta">Enriqueta</string>
+    <string name="settings_font_hennypenny">Henny Penny</string>
+    <string name="settings_font_lacquer">Lacquer</string>
+    <string name="settings_font_limelight">Limelight</string>
+
+    <string name="settings_show_colour_picker">Choose colour</string>
+    <string name="settings_hide_colour_picker">Hide colour picker</string>
+
+    <!-- Checkout / cart -->
+    <string name="cart_title">Cart</string>
+    <string name="cart_subtitle_empty">Scan a product or pick one from inventory</string>
+    <string name="cart_add_from_inventory">Add from inventory</string>
+    <string name="cart_pick_product">Pick a product</string>
+    <string name="cart_pick_close">Close product list</string>
+    <string name="cart_pick_added">Added</string>
+    <string name="cart_pick_search_hint">Search by name or barcode</string>
+    <string name="cart_pick_search_clear">Clear search</string>
+    <string name="cart_pick_no_matches">No products match your search</string>
+    <string name="cart_scan_prompt">Point the camera at a QR code to add it to the cart</string>
+    <string name="cart_scan_button">Scan</string>
+    <string name="cart_empty_title">Cart is empty</string>
+    <string name="cart_empty_body">Scan products or add them from the inventory list.</string>
+    <string name="cart_empty_message">Cart is empty</string>
+    <string name="cart_line_price">%1$s × %2$d</string>
+    <string name="cart_increase">Add one</string>
+    <string name="cart_decrease">Remove one</string>
+    <string name="cart_remove_line">Remove from cart</string>
+    <string name="cart_clear">Clear cart</string>
+    <string name="cart_clear_confirm_title">Empty the cart?</string>
+    <string name="cart_clear_confirm_body">All items in the cart will be removed.</string>
+    <string name="cart_at_max_stock">%1$s: no more stock available</string>
+    <string name="cart_insufficient_stock">%1$s: only %3$d available but %2$d requested</string>
+    <string name="cart_product_missing">%1$s is no longer available</string>
+    <string name="cart_items_subtotal">Items</string>
+    <string name="cart_tax_label">Tax (%1$s%%)</string>
+    <string name="cart_card_fee_label">Card fee (%1$s%%)</string>
+    <string name="cart_card_fee_fixed_only_label">Card fee (flat)</string>
+    <string name="cart_card_fee_mixed_label">Card fee (%1$s%% + %2$s)</string>
+    <string name="cart_net_total">Net total</string>
+    <string name="cart_amount_due">To charge</string>
+    <string name="cart_checkout">Charge</string>
+    <string name="cart_checking_out">Processing…</string>
+    <string name="cart_receipt_title">Sale complete</string>
+    <string name="cart_receipt_total">Charged %1$s</string>
+    <string name="cart_receipt_done">Done</string>
+
+    <!-- Optional note attached to a sale -->
+    <string name="cart_note_label">Note (optional)</string>
+    <string name="cart_note_placeholder">Customer, tab number…</string>
+    <string name="cart_note_clear">Remove note</string>
+    <string name="sales_note_label">Note</string>
+    <string name="sales_note_indicator">Has a note</string>
+
+    <!-- Payment method -->
+    <string name="payment_method_label">Payment method</string>
+    <string name="payment_cash">Cash</string>
+    <string name="payment_card">Card</string>
+    <string name="cart_added_to_cart">%1$s added to cart</string>
+    <string name="cart_checked_out_cash">Sale completed with cash · %1$s</string>
+    <string name="cart_checked_out_card">Sale completed with card · %1$s</string>
+
+    <!-- Rates configuration -->
+    <string name="settings_rates">Rates</string>
+    <string name="settings_rates_description">Applied to every sale and deducted from the total.</string>
+    <string name="settings_tax_rate">General tax (%%)</string>
+    <string name="settings_card_fee_rate">Card fee (%%)</string>
+    <string name="settings_card_fee_fixed">Fixed card fee</string>
+    <string name="settings_rates_note">Tax and card fee are both deducted from the sale total. The card fee only applies to card payments, and is the percentage plus the fixed fee per transaction.</string>
+    <string name="settings_rate_saved">Rates saved</string>
+
+    <!-- CSV export: column headers and totals row (spreadsheet columns, not UI) -->
+    <string name="csv_col_order_id">Order ID</string>
+    <string name="csv_col_sale_id">Sale ID</string>
+    <string name="csv_col_date">Date</string>
+    <string name="csv_col_time">Time</string>
+    <string name="csv_col_payment">Payment</string>
+    <string name="csv_col_product">Product</string>
+    <string name="csv_col_barcode">Barcode</string>
+    <string name="csv_col_items">Items</string>
+    <string name="csv_col_quantity">Quantity</string>
+    <string name="csv_col_items_subtotal">Items Subtotal</string>
+    <string name="csv_col_unit_price">Unit Price</string>
+    <!-- Read with Context.getString (no formatting), so a single % is literal here. -->
+    <string name="csv_col_tax_rate">Tax Rate (%)</string>
+    <string name="csv_col_tax">Tax</string>
+    <string name="csv_col_card_fee_rate">Card Fee Rate (%)</string>
+    <string name="csv_col_card_fee_fixed">Card Fee Fixed</string>
+    <string name="csv_col_card_fee">Card Fee</string>
+    <string name="csv_col_total">Total</string>
+    <string name="csv_col_net_total">Net Total</string>
+    <string name="csv_col_note">Note</string>
+    <string name="csv_totals">Totals</string>
+
+    <!-- Promos -->
+    <string name="promo_tab_inventory">Inventory</string>
+    <string name="promo_tab_promos">Promos</string>
+    <string name="promo_new">New promo</string>
+    <string name="promo_edit_title">Edit promo</string>
+    <string name="promo_empty_title">No promos yet</string>
+    <string name="promo_empty_body">Create a promo to discount a category or a set of products when enough are bought.</string>
+    <string name="promo_name_label">Promo name</string>
+    <string name="promo_name_placeholder">e.g. Coffee deal</string>
+    <string name="promo_kind">Applies to</string>
+    <string name="promo_kind_category">A category</string>
+    <string name="promo_kind_products">Selected products</string>
+    <string name="promo_category_label">Category</string>
+    <string name="promo_category_none">Choose a category</string>
+    <string name="promo_products_label">Products</string>
+    <string name="promo_products_none">No products selected</string>
+    <string name="promo_products_selected">%1$d selected</string>
+    <string name="promo_products_missing">%1$d product(s) no longer exist</string>
+    <string name="promo_products_choose">Choose products</string>
+    <string name="promo_products_done">Done</string>
+    <string name="promo_threshold_label">Units needed</string>
+    <string name="promo_threshold_description">The cart must hold at least this many units from the products above. Different products count towards the same total.</string>
+    <string name="promo_discount">Discount</string>
+    <string name="promo_discount_percent">Percent</string>
+    <string name="promo_discount_fixed">Fixed amount</string>
+    <string name="promo_discount_percent_label">Percentage off (%%)</string>
+    <string name="promo_discount_fixed_label">Amount off</string>
+    <string name="promo_schedule">Schedule</string>
+    <string name="promo_schedule_description">Leave the dates empty to keep the promo running until you switch it off.</string>
+    <string name="promo_starts_label">Starts</string>
+    <string name="promo_ends_label">Ends</string>
+    <string name="promo_no_start">Right away</string>
+    <string name="promo_no_end">No end date</string>
+    <string name="promo_clear_date">Clear</string>
+    <string name="promo_enabled">Promo is on</string>
+    <string name="promo_save">Save promo</string>
+    <string name="promo_incomplete">Still needed: %1$s</string>
+    <string name="promo_delete">Delete promo</string>
+    <string name="promo_delete_title">Delete this promo?</string>
+    <string name="promo_delete_body">%1$s will be removed. Past sales that used it keep their discount.</string>
+    <string name="promo_saved">Saved %1$s</string>
+    <string name="promo_deleted">Deleted %1$s</string>
+    <string name="promo_status_active">Active</string>
+    <string name="promo_status_scheduled">Scheduled</string>
+    <string name="promo_status_expired">Expired</string>
+    <string name="promo_status_off">Off</string>
+    <string name="promo_summary_category">Any %1$d from %2$s</string>
+    <string name="promo_summary_products">Any %1$d from %2$d products</string>
+    <string name="promo_summary_percent">%1$s%% off</string>
+    <string name="promo_summary_fixed">%1$s off</string>
+    <string name="promo_summary">%1$s · %2$s</string>
+    <string name="promo_badge_auto">Applied automatically</string>
+
+    <!-- Promos in the cart -->
+    <string name="cart_promo_label">Promo</string>
+    <string name="cart_promo_remove">Remove promo: %1$s</string>
+    <string name="cart_promo_restore">Put promo back: %1$s</string>
+    <string name="cart_promo_removed">%1$s (removed)</string>
+    <string name="cart_promo_applied">%1$s</string>
+    <!-- Shown next to a promo that fired more than once, e.g. "Promo: 2 for 1 (x2)" -->
+    <string name="cart_promo_repeated">%1$s (\u00d7%2$d)</string>
+    <string name="cart_promo_none">No promo applies yet</string>
+    <string name="cart_promo_hint">Add %1$d more from %2$s for %3$s off</string>
+    <string name="cart_promo_hint_products">Add %1$d more for %2$s off</string>
+
+    <!-- Promos in the backup -->
+    <string name="settings_backup_include_promos">Include promos</string>
+    <string name="settings_backup_include_promos_note">Restoring a backup that contains promos switches those discounts back on for the dates they cover.</string>
+
+    <!-- Product photos in the backup -->
+    <string name="settings_backup_include_images">Include photos</string>
+    <string name="settings_backup_include_images_note_off">Off: a single .json file with the data only. Photos stay on this device.</string>
+    <string name="settings_backup_include_images_note_on">On: a .zip file with the data and every product photo, so a restore on another device brings the photos too.</string>
+    <string name="export_in_progress_archive">Exporting backup with photos…</string>
+
+    <!-- Currency -->
+    <string name="settings_currency">Currency</string>
+    <string name="settings_currency_description">The symbol shown in front of every amount.</string>
+    <string name="settings_currency_note">Prices are stored as plain numbers, so changing the symbol relabels them rather than converting them. If you are switching to a different currency, re-enter the prices too.</string>
+    <string name="currency_usd" translatable="false">US dollar</string>
+    <string name="currency_eur" translatable="false">Euro</string>
+    <string name="currency_gbp" translatable="false">British pound</string>
+    <string name="currency_jpy" translatable="false">Japanese yen</string>
+    <string name="currency_brl" translatable="false">Brazilian real</string>
+    <string name="currency_inr" translatable="false">Indian rupee</string>
+    <string name="currency_chf" translatable="false">Swiss franc</string>
+
+    <!-- Display settings -->
+    <string name="settings_display">Display</string>
+    <string name="settings_display_description">How amounts are shown. Prices are always stored exactly, so nothing changes when you switch this.</string>
+    <string name="settings_show_decimals">Show cents</string>
+    <string name="settings_show_decimals_example">On: 12.99 · Off: 13</string>
+
+    <!-- Onboarding (first-run flow) -->
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_back">Back</string>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_finish">Start using the app</string>
+    <string name="onboarding_step_of">Step %1$d of %2$d</string>
+
+    <string name="onboarding_language_title">Choose your language</string>
+    <string name="onboarding_language_description">The whole app will use this language. You can change it later in Settings.</string>
+
+    <string name="onboarding_currency_title">Which currency do you sell in?</string>
+    <string name="onboarding_currency_description">This sets the symbol shown in front of every amount. It labels your prices — it does not convert them.</string>
+
+    <string name="onboarding_decimals_title">Show cents?</string>
+    <string name="onboarding_decimals_description">Cents are always stored exactly, so switching this off only changes what is shown, not what you have.</string>
+
+    <!-- Footer -->
+    <string name="settings_version">CrummyStock v%1$s (build %2$d)</string>
+
+    <!-- Supplies -->
+    <string name="supplies_tab_providers">Providers</string>
+    <string name="supplies_tab_materials">Materials</string>
+    <string name="supplies_tab_entries">Entries</string>
+    <string name="supplies_more_options">More options</string>
+
+    <!-- Supplies: providers -->
+    <string name="supplies_provider_new">New provider</string>
+    <string name="supplies_provider_edit_title">Edit provider</string>
+    <string name="supplies_provider_name">Name</string>
+    <string name="supplies_provider_phone">Phone</string>
+    <string name="supplies_provider_address">Address</string>
+    <string name="supplies_provider_notes">Notes</string>
+    <string name="supplies_provider_search">Search name or phone</string>
+    <string name="supplies_provider_summary_label">Providers</string>
+    <string name="supplies_provider_empty_title">No providers yet</string>
+    <string name="supplies_provider_empty_body">Tap \u201CNew provider\u201D to add who you buy supplies from.</string>
+    <string name="supplies_provider_no_matches_title">No providers match</string>
+    <string name="supplies_provider_no_matches_body">Try a different name or phone number.</string>
+    <string name="supplies_provider_delete_title">Delete provider?</string>
+    <string name="supplies_provider_delete_body">%1$s will be removed. Purchase history is kept, but it will no longer be linked to a provider.</string>
+    <string name="supplies_provider_saved">Provider saved: %1$s</string>
+    <string name="supplies_provider_deleted">Provider deleted: %1$s</string>
+    <string name="supplies_provider_duplicate">A provider called %1$s already exists</string>
+    <string name="supplies_provider_name_required">Enter a provider name</string>
+    <plurals name="supplies_provider_purchases">
+        <item quantity="one">%d purchase</item>
+        <item quantity="other">%d purchases</item>
+    </plurals>
+    <string name="supplies_provider_purchases_total">%1$s \u00B7 %2$s</string>
+    <string name="supplies_provider_total">%1$s total</string>
+
+    <!-- Supplies: materials -->
+    <string name="supplies_material_new">New material</string>
+    <string name="supplies_material_edit_title">Edit material</string>
+    <string name="supplies_material_name">Name</string>
+    <string name="supplies_material_unit">Unit</string>
+    <string name="supplies_material_custom_unit">Custom unit</string>
+    <string name="supplies_material_custom_unit_placeholder">e.g. sack, roll, pair</string>
+    <string name="supplies_material_stock">Current stock</string>
+    <string name="supplies_material_stock_hint">Quantity currently on hand</string>
+    <string name="supplies_material_threshold">Low-stock threshold</string>
+    <string name="supplies_material_threshold_hint">Warn when stock reaches this number</string>
+    <string name="supplies_material_notes">Notes</string>
+    <string name="supplies_material_search">Search materials</string>
+    <string name="supplies_material_summary_items">Materials</string>
+    <string name="supplies_material_summary_low">Low stock</string>
+    <string name="supplies_material_summary_value">Stock value</string>
+    <string name="supplies_material_filter_all">All (%1$d)</string>
+    <string name="supplies_material_filter_low">Low</string>
+    <string name="supplies_material_filter_out">Out</string>
+    <string name="supplies_material_stock_with_unit">%1$d %2$s</string>
+    <string name="supplies_material_badge_low">Low</string>
+    <string name="supplies_material_badge_out">Out</string>
+    <string name="supplies_material_last_cost">Last paid %1$s</string>
+    <string name="supplies_material_no_purchases">No purchases yet</string>
+    <string name="supplies_material_empty_title">No materials yet</string>
+    <string name="supplies_material_empty_body">Tap \u201CNew material\u201D to add the supplies you buy and use.</string>
+    <string name="supplies_material_no_matches_title">Nothing matches your filters</string>
+    <string name="supplies_material_no_matches_body">Try clearing the search or choosing a different filter.</string>
+    <string name="supplies_material_adjust">Adjust stock</string>
+    <string name="supplies_material_adjust_title">Adjust stock</string>
+    <string name="supplies_material_adjust_body">Current stock: %1$d %2$s. This is a correction, not a purchase. Record purchases as entries so they keep their cost.</string>
+    <string name="supplies_material_new_stock">New stock</string>
+    <string name="supplies_material_stock_updated">Stock updated: %1$s</string>
+    <string name="supplies_material_saved">Material saved: %1$s</string>
+    <string name="supplies_material_deleted">Material deleted: %1$s</string>
+    <string name="supplies_material_duplicate">A material called %1$s already exists</string>
+    <string name="supplies_material_name_required">Enter a material name</string>
+    <string name="supplies_material_custom_unit_required">Enter the custom unit</string>
+    <string name="supplies_material_delete_title">Delete material?</string>
+    <string name="supplies_material_delete_body">%1$s will be removed. Past purchases keep its name and unit.</string>
+    <string name="supplies_material_stock_note">Purchases are recorded as entries and increase this stock automatically.</string>
+
+    <!-- Supplies: entries -->
+    <string name="supplies_entry_new">New entry</string>
+    <string name="supplies_entry_editor_title">New purchase</string>
+    <string name="supplies_entry_title">Purchase details</string>
+    <string name="supplies_entry_summary_month">This month</string>
+    <string name="supplies_entry_summary_count">Entries</string>
+    <string name="supplies_entry_search">Search reference, note or provider</string>
+    <string name="supplies_entry_filter_all_providers">All providers</string>
+    <string name="supplies_entry_empty_title">No purchases recorded yet</string>
+    <string name="supplies_entry_empty_body">Tap \u201CNew entry\u201D to record a purchase from a provider.</string>
+    <string name="supplies_entry_no_matches_title">No purchases match</string>
+    <string name="supplies_entry_no_matches_body">Try a different search or provider.</string>
+    <string name="supplies_entry_date">Date</string>
+    <string name="supplies_entry_provider">Provider</string>
+    <string name="supplies_entry_select_provider">Select provider</string>
+    <string name="supplies_entry_reference">Reference</string>
+    <string name="supplies_entry_reference_placeholder">Invoice or folio (optional)</string>
+    <string name="supplies_entry_note">Note</string>
+    <string name="supplies_entry_note_placeholder">Optional memo</string>
+    <string name="supplies_entry_lines_title">Materials</string>
+    <string name="supplies_entry_add_material">Add material</string>
+    <string name="supplies_entry_no_lines">Add at least one material to this purchase.</string>
+    <string name="supplies_entry_quantity">Quantity</string>
+    <string name="supplies_entry_unit_cost">Unit cost</string>
+    <string name="supplies_entry_line_total">Line total</string>
+    <string name="supplies_entry_total">Total</string>
+    <string name="supplies_entry_remove_line">Remove material</string>
+    <string name="supplies_entry_material_unavailable">This material is no longer available</string>
+    <string name="supplies_entry_detail_line_amount">%1$d %2$s × %3$s</string>
+    <string name="supplies_entry_stock_note">Saving increases the stock of every material on this purchase.</string>
+    <string name="supplies_entry_saved">Purchase saved</string>
+    <string name="supplies_entry_deleted">Purchase deleted</string>
+    <string name="supplies_entry_delete_title">Delete this purchase?</string>
+    <string name="supplies_entry_delete_body">The stock it added will be removed. This cannot be undone.</string>
+    <string name="supplies_entry_delete_action">Delete purchase</string>
+    <string name="supplies_entry_delete_hint">Purchases cannot be edited. Delete this one and record a new entry to correct it.</string>
+    <string name="supplies_entry_delete_blocked">Cannot delete: only %2$d of %1$s remain, but this purchase added %3$d.</string>
+    <string name="supplies_entry_provider_missing">That provider no longer exists</string>
+    <string name="supplies_entry_material_missing">A material on this purchase no longer exists</string>
+    <string name="supplies_entry_duplicate_material">Each material can appear only once: %1$s</string>
+    <string name="supplies_entry_invalid_line">Check the quantity and unit cost for %1$s</string>
+    <string name="supplies_entry_total_too_large">This purchase total is too large</string>
+    <string name="supplies_entry_stock_too_large">Stock would exceed the maximum for %1$s</string>
+    <string name="supplies_entry_empty">Add at least one material to this purchase</string>
+    <string name="supplies_entry_pick_provider_title">Choose provider</string>
+    <string name="supplies_entry_pick_material_title">Choose material</string>
+    <string name="supplies_entry_search_providers">Search providers</string>
+    <string name="supplies_entry_search_materials">Search materials</string>
+    <string name="supplies_entry_no_providers">No providers yet</string>
+    <string name="supplies_entry_no_materials">No materials yet</string>
+    <string name="supplies_entry_no_provider_matches">No providers match</string>
+    <string name="supplies_entry_no_material_matches">No materials match</string>
+    <string name="supplies_entry_create_provider_body">Add a provider now, or create one in the Providers tab.</string>
+    <string name="supplies_entry_create_material_body">Add a material now, or create one in the Materials tab.</string>
+    <string name="supplies_entry_picker_stock">%1$d %2$s in stock</string>
+    <string name="supplies_entry_close_picker">Close picker</string>
+    <plurals name="supplies_entry_lines">
+        <item quantity="one">%d line</item>
+        <item quantity="other">%d lines</item>
+    </plurals>
+
+    <!-- Units of measure -->
+    <string name="unit_piece">piece</string>
+    <string name="unit_pack">pack</string>
+    <string name="unit_box">box</string>
+    <string name="unit_bag">bag</string>
+    <string name="unit_dozen">dozen</string>
+    <string name="unit_kg">kg</string>
+    <string name="unit_gram">g</string>
+    <string name="unit_litre">L</string>
+    <string name="unit_millilitre">mL</string>
+    <string name="unit_metre">m</string>
+    <string name="unit_other">other</string>
+
+    <!-- Analytics screen -->
+    <string name="analytics_title">Analytics</string>
+    <string name="analytics_close">Close analytics</string>
+    <string name="analytics_range_week">Last 7 days</string>
+    <string name="analytics_average_day">Avg trading day</string>
+    <string name="analytics_best_day">Best day</string>
+    <string name="analytics_discounts">Discounts</string>
+    <string name="analytics_trend_chart">Net revenue per day</string>
+    <string name="analytics_payment_chart">Payment method</string>
+    <string name="analytics_payment_cash">Cash</string>
+    <string name="analytics_payment_card">Card</string>
+    <string name="analytics_top_products">Top products</string>
+    <string name="analytics_empty">No sales in this period yet.</string>
+    <string name="analytics_day_section">Selected day</string>
+
+    <!-- Inventory view modes -->
+    <string name="inventory_view_list">List</string>
+    <string name="inventory_view_folders">Folders</string>
+    <string name="inventory_view_switch">Switch inventory layout</string>
+    <string name="inventory_folder_count">%1$d products</string>
+    <string name="inventory_folder_empty">No products</string>
+    <string name="inventory_folder_back">Back to folders</string>
+    <string name="inventory_favourite">Add to favourites</string>
+    <string name="inventory_unfavourite">Remove from favourites</string>
+
+    <!-- Wi-Fi backup transfer -->
+    <string name="transfer_title">Transfer over Wi-Fi</string>
+    <string name="transfer_back">Back</string>
+    <string name="transfer_warning">This transfer is not encrypted. Use it on a network you trust, like your own shop or home Wi-Fi. Do not leave the connection open when you are finished.</string>
+    <string name="transfer_permission_required">Android is blocking local network access for this app. Allow nearby devices (local network) in Android settings so the computer can reach this phone.</string>
+    <string name="transfer_permission_action">Allow access</string>
+
+    <string name="transfer_receive_title">Connect with a computer</string>
+    <string name="transfer_receive_description">Starts a temporary server on this phone. Enter the address and code below in your computer app. The computer can then send a backup here, or download this phone\'s data, including product photos.</string>
+    <string name="transfer_receive_start">Start connection</string>
+    <string name="transfer_receive_retry">Try again</string>
+    <string name="transfer_receive_stop">Stop</string>
+    <string name="transfer_receive_hint">The server stops by itself after one successful transfer, or after five minutes with no connection.</string>
+    <string name="transfer_receive_done">Transfer complete. The server has stopped.</string>
+    <string name="transfer_export_done">Backup downloaded by the computer. The server has stopped.</string>
+    <string name="transfer_waiting">Waiting for the computer to connect…</string>
+    <string name="transfer_receiving">Receiving…</string>
+    <string name="transfer_address">Address</string>
+    <string name="transfer_port">Port</string>
+    <string name="transfer_code">Code</string>
+    <string name="transfer_no_wifi">Not connected to Wi-Fi</string>
+    <string name="transfer_port_unavailable">Port %1$s is already in use on this phone. Close the other app using it, or try again.</string>
+
+    <string name="transfer_error_not_backup">What arrived was not a backup this app can read. Nothing was changed.</string>
+    <string name="transfer_failed">Transfer failed. Nothing was changed.</string>
+
+    <string name="settings_transfer_title">Transfer over Wi-Fi</string>
+    <string name="settings_transfer_description">Send or receive a backup with your computer on the same network, without a cable.</string>
+    <string name="settings_transfer_open">Open transfer</string>
+</resources>

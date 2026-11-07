@@ -1,0 +1,10 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- The X wordmark, as a single filled path so it tints like any other icon. -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M17.751,3 L20.818,3 L14.117,10.659 L22,21 L15.828,21 L11,14.52 L5.474,21 L2.405,21 L9.573,12.807 L2,3 L8.328,3 L12.693,8.924 L17.751,3 Z M16.675,19.184 L18.374,19.184 L7.405,4.731 L5.582,4.731 L16.675,19.184 Z" />
+</vector>

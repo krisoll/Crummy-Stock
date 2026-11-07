@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Adaptive launcher icon (Android 8.0+).
+
+  The foreground is the shop's own artwork, inset to 66% of the 108dp canvas so that every
+  launcher mask — circle, squircle, rounded square — keeps the character whole. The background
+  is the flat blue sampled from the drawing itself, so the margin the mask adds reads as part
+  of the picture rather than as a frame around it.
+
+  `monochrome` is a separate silhouette: Android 13+ tints that single layer for themed icons,
+  and feeding it the colour artwork would render as a shapeless block.
+-->
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/ic_launcher_background" />
+    <foreground android:drawable="@drawable/ic_launcher_foreground" />
+    <monochrome android:drawable="@drawable/ic_launcher_monochrome" />
+</adaptive-icon>

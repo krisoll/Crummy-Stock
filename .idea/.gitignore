@@ -1,0 +1,12 @@
+# Machine-specific IDE state. Everything else in .idea/ is tracked on purpose:
+# codeStyle/ and inspectionProfiles/ are shared project configuration that keeps
+# contributions formatted consistently.
+/shelf/
+/workspace.xml
+/caches/
+/modules/
+
+# Records which physical device (by serial number) the author last deployed to.
+# Machine-specific, and a serial number is not something to publish.
+/deviceManager.xml
+/deploymentTargetSelector.xml
