@@ -8,7 +8,9 @@ Everything lives on the device. There is no account, no backend, no analytics an
 
 It is the mobile companion to the **Crummy Stock Desktop** app, and the two can exchange backups over Wi-Fi.
 
-![Inventory](docs/screenshots/inventory.png)
+<p align="center">
+  <img src="docs/screenshots/inventory.png" alt="Crummy Stock inventory screen" width="300">
+</p>
 
 ## Features
 
@@ -18,19 +20,73 @@ It is the mobile companion to the **Crummy Stock Desktop** app, and the two can 
 - **Supplies** — materials, providers and purchase entries with cost tracking.
 - **Reports** — daily and ranged reports, charts, and CSV/JSON export.
 - **Backup** — a full export/import archive, plus device-to-device transfer over the local network.
-- **Personalisation** — background, panel, button, highlight and text colours; a set of bundled fonts; text size; motion speed; and a custom sale animation.
+- **Customisation** — the whole app can be repainted and re-typeset to match your shop. See [Customisation](#customisation).
 - **English and Spanish** — per-app language selection, independent of the system locale.
 - **No telemetry** — nothing about you or your shop ever leaves the device unless you export it.
 
 ## Screenshots
 
-| Sales | Promotions |
+| Inventory | Sales |
 |---|---|
-| ![Sales](docs/screenshots/sales.png) | ![Promotions](docs/screenshots/promos.png) |
+| ![Inventory](docs/screenshots/inventory.png) | ![Sales](docs/screenshots/sales.png) |
 
-| Settings | Inventory |
+| Promotions | Settings |
 |---|---|
-| ![Settings](docs/screenshots/settings.png) | ![Inventory](docs/screenshots/inventory.png) |
+| ![Promotions](docs/screenshots/promos.png) | ![Settings](docs/screenshots/settings.png) |
+
+## Customisation
+
+Almost nothing about the look of the app is fixed. **Settings → Personalise**
+rebuilds the palette, the type and the motion from choices you make, and every
+screen follows — there is no "theme" that only some parts of the UI respect.
+
+### Colours
+
+Five independent channels, each switchable on its own:
+
+| Channel | What it drives |
+|---|---|
+| **Background** | The page behind everything |
+| **Panel** | The cards and sections resting on the page |
+| **Button** | Filled buttons, the FAB, and anything else that demands action |
+| **Highlight** | Selected filters, the active-tab indicator, emphasised headings |
+| **Text** | Every label, value and heading in the app |
+
+Because the five are derived from one another rather than hard-coded, any
+combination stays legible: pick a dark background and the app derives a light
+ink automatically, so you never end up with black text on a black page. Each
+channel has a live preview before you commit, and the whole palette can be
+saved as a named theme, exported in a backup, and reapplied later — or sent to
+the desktop app over Wi-Fi.
+
+There are five built-in palettes to start from — **Default**, **Sage**,
+**Sunset**, **Ocean** and **Midnight** — plus a full HSV picker for anything else.
+
+### Type
+
+Eight bundled typefaces — **Darumadrop One**, **Charis SIL**, **Coiny**,
+**Enriqueta**, **HennyPenny**, **Lacquer** and **Limelight** — plus the system
+font, sans-serif, serif, monospace and cursive families. Text size is a
+separate scale, so a shopkeeper who wants large type does not have to accept a
+comic font to get it.
+
+### Motion, sound and animation
+
+- **Motion speed** — one setting (off, fast, normal, slow) that scales every
+  animation in the app, so the transitions can be calmed down or switched off
+  as a whole.
+- **Scanning feedback** — an audible beep and a haptic buzz, each toggled
+  separately, and the beep tone itself can be replaced with your own file. Both
+  are silent no-ops on hardware that cannot do them.
+- **Startup screen** — show it or not, pick the image it draws, its size, and one
+  of four disc styles behind it (none, soft, solid, outline).
+- **Sale animation** — the celebratory flourish shown after a sale can be
+  replaced with your own `.lottie` file.
+
+### Language
+
+The app ships in English and Spanish, and the choice is per-app rather than
+system-wide, so it does not change how the rest of the phone behaves.
 
 ## Building
 
