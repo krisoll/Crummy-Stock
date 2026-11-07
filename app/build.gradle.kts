@@ -51,8 +51,8 @@ android {
         applicationId = "com.krisoll.crummystock"
         minSdk = 24
         targetSdk = 37
-        versionCode = 8
-        versionName = "1.4.1"
+        versionCode = 1
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
