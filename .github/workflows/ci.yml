@@ -7,7 +7,7 @@ on:
     branches: [main]
   workflow_dispatch:
 
-# A new push to the same branch cancels the previous run — the older result is
+# A new push to the same branch cancels the previous run â€” the older result is
 # already stale by then, and CI minutes are better spent on the newer commit.
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -24,13 +24,13 @@ jobs:
 
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # The build runs on JDK 25: gradle/gradle-daemon-jvm.properties pins
       # toolchainVersion=25, and AGP 9 refuses to start on anything older.
       # `java-version-file` is not used because there is no .java-version here.
       - name: Set up JDK 25
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '25'
@@ -39,7 +39,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       # The Robolectric tests inflate real layouts and read real string
-      # resources, so the Android SDK is genuinely required — this is not a
+      # resources, so the Android SDK is genuinely required â€” this is not a
       # pure-JVM unit test run. Keeping the suite on the JVM (rather than on an
       # emulator) is what makes it practical on hosted runners.
       - name: Run unit tests
@@ -50,7 +50,7 @@ jobs:
       # than only on success.
       - name: Upload test report
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: unit-test-report
           path: app/build/reports/tests/testDebugUnitTest
@@ -58,7 +58,7 @@ jobs:
 
       - name: Upload test results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: unit-test-results
           path: app/build/test-results/testDebugUnitTest
@@ -71,10 +71,10 @@ jobs:
 
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up JDK 25
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '25'
@@ -91,7 +91,7 @@ jobs:
 
       - name: Upload lint report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: lint-report
           path: app/build/reports/lint-results-debug.html
@@ -104,10 +104,10 @@ jobs:
 
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up JDK 25
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '25'
@@ -122,7 +122,7 @@ jobs:
         run: ./gradlew :app:assembleDebug --stacktrace
 
       - name: Upload debug APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: app-debug
           path: app/build/outputs/apk/debug/*.apk
