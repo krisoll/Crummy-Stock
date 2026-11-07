@@ -1,0 +1,25 @@
+# Normalise line endings on commit so a Windows checkout cannot poison the repo.
+* text=auto
+
+# Gradle wrapper scripts must keep LF. If `gradlew` is committed with CRLF, the
+# shebang line becomes `#!/bin/sh\r` and the kernel looks for an interpreter
+# literally called "sh\r" — which fails on Linux with exit code 127. This is the
+# sibling of the executable-bit problem that broke the first CI run.
+gradlew text eol=lf
+gradlew.bat text eol=crlf
+
+*.sh   text eol=lf
+*.bat  text eol=crlf
+
+# Binary files: never touch these.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ttf  binary
+*.otf  binary
+*.jar  binary
+*.zip  binary
+*.jks  binary
+*.keystore binary
