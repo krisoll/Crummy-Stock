@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — CrummyStock</title>
+<meta name="description" content="Privacy Policy for the CrummyStock Android app. The app is local-first: no accounts, no cloud sync, no ads, no analytics, and no sale of personal data.">
+<meta name="robots" content="index, follow">
+<!--
+  CrummyStock Privacy Policy
+  Copyright (C) 2026 Krisoll
+  SPDX-License-Identifier: AGPL-3.0-only
+
+  Published at:
+    https://krisoll.github.io/Crummy-Stock/privacy.html
+-->
+<link rel="canonical" href="https://krisoll.github.io/Crummy-Stock/privacy.html">
+<style>
+  :root{
+    color-scheme: light dark;
+    --bg:#f7f7f5;
+    --surface:#ffffff;
+    --text:#1d1d1f;
+    --muted:#5f6368;
+    --line:#d9d9d6;
+    --accent:#0b6b53;
+    --accent-strong:#084d3c;
+    --accent-soft:#e6f2ee;
+    --warn:#7a4b00;
+    --warn-soft:#fff4db;
+    --radius:14px;
+    --max:930px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#121413;
+      --surface:#1a1d1b;
+      --text:#e9ece9;
+      --muted:#a7aea8;
+      --line:#303632;
+      --accent:#6fd1b2;
+      --accent-strong:#9be3cb;
+      --accent-soft:#16352c;
+      --warn:#f0c46a;
+      --warn-soft:#33280f;
+    }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  a{color:var(--accent);text-underline-offset:2px}
+  a:hover{color:var(--accent-strong)}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+  .skip{position:absolute;left:-9999px;top:0;background:var(--surface);padding:.7rem 1rem;z-index:10}
+  .skip:focus{left:1rem;top:1rem}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 1.1rem}
+  header.hero{
+    background:linear-gradient(160deg,var(--accent-soft),transparent 70%);
+    border-bottom:1px solid var(--line);
+    padding:2.6rem 0 1.8rem;
+  }
+  .kicker{
+    display:inline-block;
+    font-size:.78rem;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    font-weight:700;
+    color:var(--accent);
+    margin:0 0 .5rem;
+  }
+  h1{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.15;margin:0 0 .55rem;letter-spacing:-.02em}
+  .subtitle{font-size:1.05rem;color:var(--muted);margin:0 0 1.2rem;max-width:65ch}
+  .meta{
+    display:flex;flex-wrap:wrap;gap:.45rem .8rem;
+    font-size:.9rem;color:var(--muted);
+  }
+  .meta span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:.25rem .7rem}
+  .lang-nav{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.2rem}
+  .lang-nav a{
+    display:inline-block;text-decoration:none;font-weight:650;
+    border:1px solid var(--line);border-radius:999px;padding:.4rem .95rem;background:var(--surface);
+  }
+  main{padding:2rem 0 3rem}
+  section.card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:1.15rem 1.25rem;
+    margin:0 0 1rem;
+  }
+  .callout{
+    border-left:5px solid var(--accent);
+    background:var(--accent-soft);
+    border-radius:10px;
+    padding:1rem 1.15rem;
+    margin:0 0 1.2rem;
+  }
+  .callout h2{margin:0 0 .4rem;font-size:1.05rem}
+  .callout ul{margin:.35rem 0 0;padding-left:1.15rem}
+  .callout li{margin:.25rem 0}
+  .warn{
+    border-left:5px solid var(--warn);
+    background:var(--warn-soft);
+    border-radius:10px;
+    padding:1rem 1.15rem;
+    margin:1rem 0;
+  }
+  .warn strong{color:var(--warn)}
+  h2{font-size:1.35rem;line-height:1.25;margin:1.8rem 0 .65rem;letter-spacing:-.01em}
+  h3{font-size:1.05rem;margin:1.15rem 0 .4rem}
+  p{margin:.55rem 0}
+  ul,ol{margin:.55rem 0;padding-left:1.25rem}
+  li{margin:.3rem 0}
+  .toc{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:1rem 1.25rem;
+    margin:0 0 1.2rem;
+  }
+  .toc h2{margin:0 0 .5rem;font-size:1.05rem}
+  .toc ol{columns:2;column-gap:2rem;margin:0;padding-left:1.2rem;font-size:.95rem}
+  @media (max-width:640px){.toc ol{columns:1}}
+  .toc a{text-decoration:none}
+  .toc a:hover{text-decoration:underline}
+  table{width:100%;border-collapse:collapse;margin:.8rem 0;font-size:.95rem}
+  th,td{border:1px solid var(--line);padding:.6rem .7rem;text-align:left;vertical-align:top}
+  th{background:var(--accent-soft);font-weight:700}
+  .note{font-size:.92rem;color:var(--muted)}
+  .pill{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border-radius:999px;padding:.18rem .55rem;margin-right:.35rem}
+  hr{border:0;border-top:1px solid var(--line);margin:2.2rem 0}
+  footer{border-top:1px solid var(--line);padding:1.4rem 0 2.4rem;color:var(--muted);font-size:.9rem}
+  .top{font-size:.9rem}
+  .back{display:inline-block;margin-top:.5rem;font-size:.9rem}
+  @media print{
+    :root{--bg:#fff;--surface:#fff;--text:#000;--muted:#333;--line:#bbb;--accent:#000;--accent-soft:#f2f2f2}
+    body{font-size:11pt}
+    .lang-nav,.toc,.skip,.top{display:none}
+    section.card,.callout,.warn,.toc{break-inside:avoid}
+    a{color:#000;text-decoration:none}
+    a[href^="http"]::after{content:" (" attr(href) ")";font-size:9pt;word-break:break-all}
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">CrummyStock for Android</p>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">CrummyStock is a local-first shop inventory and sales app. It has no accounts, no cloud sync, no advertising, no analytics, and no crash reporting. Your shop data stays on your device unless you choose to export or transfer it.</p>
+    <div class="meta">
+      <span><strong>Effective date:</strong> November 7, 2026</span>
+      <span><strong>Last updated:</strong> November 7, 2026</span>
+      <span><strong>Version:</strong> 1.0</span>
+      <span><strong>App:</strong> CrummyStock (Android)</span>
+      <span><strong>Package:</strong> com.krisoll.crummystock</span>
+    </div>
+    <nav class="lang-nav" aria-label="Language">
+      <a href="#english" hreflang="en">English</a>
+      <a href="#spanish" hreflang="es">Español</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+  <!-- ============================ ENGLISH ============================ -->
+  <article id="english" lang="en">
+    <div class="callout">
+      <h2>The short version</h2>
+      <ul>
+        <li><strong>We do not collect your shop data.</strong> Products, sales, suppliers, photos, and settings are stored on your Android device.</li>
+        <li><strong>No account is required.</strong> There is no sign-up, login, cloud sync, or remote server.</li>
+        <li><strong>No ads, analytics, tracking, profiling, or crash reporting.</strong> The app does not use advertising IDs.</li>
+        <li><strong>We do not sell or share personal data.</strong> We do not have access to the data on your device.</li>
+        <li><strong>You decide when data leaves the app.</strong> Backups, CSV/Excel exports, and same-Wi-Fi transfers only happen when you start them.</li>
+        <li><strong>You can delete everything</strong> by clearing the app's storage or uninstalling it, and by deleting any backup files you created.</li>
+      </ul>
+    </div>
+
+    <nav class="toc" aria-label="Contents">
+      <h2>Contents</h2>
+      <ol>
+        <li><a href="#en-1">Who we are</a></li>
+        <li><a href="#en-2">Scope of this policy</a></li>
+        <li><a href="#en-3">Data stored on your device</a></li>
+        <li><a href="#en-4">Permissions and device features</a></li>
+        <li><a href="#en-5">What we do not collect</a></li>
+        <li><a href="#en-6">How data can leave the app</a></li>
+        <li><a href="#en-7">Backups may contain personal data</a></li>
+        <li><a href="#en-8">Third-party components</a></li>
+        <li><a href="#en-9">Legal bases and your rights in Chile</a></li>
+        <li><a href="#en-10">Retention</a></li>
+        <li><a href="#en-11">Security</a></li>
+        <li><a href="#en-12">Children</a></li>
+        <li><a href="#en-13">International transfers</a></li>
+        <li><a href="#en-14">Your choices and deleting data</a></li>
+        <li><a href="#en-15">Changes to this policy</a></li>
+        <li><a href="#en-16">Contact</a></li>
+      </ol>
+    </nav>
+
+    <section class="card">
+      <h2 id="en-1">1. Who we are</h2>
+      <p>This privacy policy is issued by <strong>Krisoll</strong>, an individual developer based in <strong>Chile</strong> ("we", "us", or "our"). We are the publisher of the Android application <strong>CrummyStock</strong> (package name <code>com.krisoll.crummystock</code>).</p>
+      <p>For privacy questions, requests, or complaints, contact us at <a href="mailto:krisoll@gmail.com">krisoll@gmail.com</a>.</p>
+      <p>Because CrummyStock stores data on your device and does not operate a cloud service, we generally cannot access, read, export, or delete the data inside your installation. We can still help you with instructions and, where applicable, with any personal data you send us directly (for example, an email support request).</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-2">2. Scope of this policy</h2>
+      <p>This policy applies to the CrummyStock Android app distributed through Google Play and as a direct APK, and to the privacy practices of the app itself. It does not apply to:</p>
+      <ul>
+        <li>Google Play, Android, or your device manufacturer's own services and settings;</li>
+        <li>third-party apps or websites you open from the app;</li>
+        <li>files you create with other tools after exporting them from CrummyStock.</li>
+      </ul>
+      <p>This policy is written for a general audience, including shop owners and staff. The app is a business tool and is not directed at children.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-3">3. Data stored on your device</h2>
+      <p>CrummyStock stores the information you enter or capture so the app can work. This information is kept in the app's private storage on your Android device. Depending on how you use the app, it may include:</p>
+
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Examples</th><th>Why it is stored</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Inventory</strong></td>
+            <td>Product names, barcodes, prices, stock quantities, categories, tags, product photos.</td>
+            <td>To show and manage your stock, scan barcodes, and calculate sale totals.</td>
+          </tr>
+          <tr>
+            <td><strong>Sales</strong></td>
+            <td>Order IDs, dates and times, items, quantities, prices, discounts, tax and card fees, payment method, order notes.</td>
+            <td>To record sales, print or export receipts, and show sales history and reports.</td>
+          </tr>
+          <tr>
+            <td><strong>Promotions</strong></td>
+            <td>Promo names, rules, category or product targets, thresholds, discount values, schedules, enabled/disabled state.</td>
+            <td>To apply discounts in the cart and manage promotions.</td>
+          </tr>
+          <tr>
+            <td><strong>Supplies</strong></td>
+            <td>Supplier/provider names, phone numbers, addresses, notes; materials, units, stock, purchase entries, costs, references.</td>
+            <td>To track suppliers, materials, purchases, and stock.</td>
+          </tr>
+          <tr>
+            <td><strong>Settings</strong></td>
+            <td>Language, currency, theme and colours, font and text size, startup screen, scanner sounds, tax rates, card fees, backup preferences.</td>
+            <td>To remember how you configured the app.</td>
+          </tr>
+          <tr>
+            <td><strong>Backups and exports</strong></td>
+            <td>ZIP backup files containing the data above and images; CSV or Excel sales reports.</td>
+            <td>To let you save, move, or restore your own data.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Some free-text fields (for example supplier notes, order notes, product descriptions, or names you type) could contain personal data about other people. You control what you enter. You should only enter information you are allowed to use and keep.</p>
+      <p>The app does not require your name, email address, phone number, postal address, precise location, contacts, microphone audio, SMS, call logs, health data, or government identifiers. It does not ask for an account.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-4">4. Permissions and device features</h2>
+      <p>CrummyStock requests only the Android permissions needed for features you choose to use:</p>
+
+      <h3>Camera</h3>
+      <p>Used to scan barcodes and to take product or startup-screen photos. Barcode frames are processed on the device to read the code; they are not uploaded to us or to a server. Photos you take are saved in the app's private storage and may be included in a backup if you create one. You can deny camera permission and still use manual entry for products and sales.</p>
+
+      <h3>Vibration</h3>
+      <p>Used for optional haptic feedback when scanning. It is a normal Android permission and does not access personal data.</p>
+
+      <h3>Internet, network state, and local network</h3>
+      <p>Used only for the optional backup transfer feature, which lets you send or receive a backup between CrummyStock on your phone and another device on the <strong>same local Wi-Fi network</strong>. The app does not connect to a remote CrummyStock server, does not upload your data to us, and does not run a background server. On newer Android versions, the app also requests the local-network permission when you open the transfer screen. You can deny it and continue using the rest of the app.</p>
+
+      <p>The app does not request broad access to your files, contacts, location, microphone, SMS, or call logs. When you export or import a file, Android's system file picker lets you choose the location and grants access only to the file you selected.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-5">5. What we do not collect</h2>
+      <p>We do not collect, transmit to ourselves, or maintain on a server:</p>
+      <ul>
+        <li>your shop inventory, sales, suppliers, materials, promotions, notes, or photos;</li>
+        <li>your name, email address, phone number, or postal address (unless you send them to us in a support message);</li>
+        <li>your precise or approximate location;</li>
+        <li>your contacts, calendar, SMS, call logs, or microphone audio;</li>
+        <li>advertising identifiers or cross-app tracking data;</li>
+        <li>analytics, behavioural profiles, or crash reports.</li>
+      </ul>
+      <p>The app contains no advertising SDK, no analytics SDK, no crash-reporting SDK, and no social-media SDK. We do not sell personal data, and we do not share it for cross-context behavioural advertising.</p>
+      <p class="note">If you email us, we receive your email address and whatever you include in the message. We use that only to answer you and to handle your request, and we keep it only as long as needed for that purpose or as required by law.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-6">6. How data can leave the app</h2>
+      <p>Data leaves the app only when you take an action that you choose:</p>
+
+      <h3>Backup export</h3>
+      <p>You can export a ZIP backup containing your shop data and images. The file is saved wherever you choose through Android's file picker. You can then store it, copy it, or share it with others using other apps. Once a backup leaves CrummyStock, its protection depends on where you put it and who can access it.</p>
+
+      <h3>CSV and Excel reports</h3>
+      <p>You can export sales reports as CSV or Excel files. These contain sales information and are saved where you choose. They are not uploaded to us.</p>
+
+      <h3>Same-Wi-Fi backup transfer</h3>
+      <p>The transfer feature sends a backup directly between two devices on the same local network. The data is not routed through our servers. The receiving device and the network are chosen by you, so you should use a trusted network and confirm that the receiving device is the correct one. The transfer server is active only while the transfer screen is open.</p>
+
+      <h3>Android system backup</h3>
+      <p>Android may include app data in the device's system backup if you have enabled backup in your device settings. That backup is controlled by Google and your device manufacturer under their own terms and privacy policies, not by us. You can turn it off in Android settings.</p>
+
+      <h3>Email support</h3>
+      <p>If you contact us, your email provider and ours process the message. We do not attach your shop data unless you choose to send it.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-7">7. Backups may contain personal data</h2>
+      <div class="warn">
+        <p><strong>Important:</strong> CrummyStock backup files are ordinary ZIP archives. The app does not add a password or encryption to them. Anyone who obtains a backup file may be able to read the shop data, images, supplier details, notes, and sales records inside it.</p>
+      </div>
+      <p>Backups can include supplier names, phone numbers, addresses, notes, and other free-text information about people. If you export, copy, upload, email, or transfer a backup, you are responsible for:</p>
+      <ul>
+        <li>keeping the file in a secure location;</li>
+        <li>sharing it only with people who are authorised to receive it;</li>
+        <li>deleting copies you no longer need;</li>
+        <li>complying with the data-protection and confidentiality obligations that apply to your business.</li>
+      </ul>
+      <p>If you need encrypted backups, encrypt the ZIP file with a reputable tool before storing or sharing it, and keep the password separately.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-8">8. Third-party components</h2>
+      <p>CrummyStock uses a small number of third-party components. None of them is used by us to collect your shop data.</p>
+
+      <h3>Google ML Kit Barcode Scanning</h3>
+      <p>The barcode scanner uses Google ML Kit. The scanning is designed to run on the device. CrummyStock does not send your camera images or scanned barcodes to us or to Google. Google may collect limited technical or usage information through its SDK as described in Google's own terms and privacy policy. See <a href="https://developers.google.com/ml-kit/terms" rel="noopener noreferrer">ML Kit Terms</a> and the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+
+      <h3>Google Play and Android</h3>
+      <p>If you install CrummyStock from Google Play, Google may collect information about the installation, updates, device, and app usage as part of its store services. If you use Android's system backup, Google or your device manufacturer may process app data under its own policy. We do not control those services. See the <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Google Privacy Policy</a>.</p>
+
+      <h3>Local libraries</h3>
+      <p>The app also uses open-source libraries for the database, image loading, animation, and user interface. These libraries run locally and do not send your data to us.</p>
+
+      <p>We do not use advertising networks, analytics providers, crash-reporting services, data brokers, or social-media tracking SDKs.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-9">9. Legal bases and your rights in Chile</h2>
+      <p>Because CrummyStock does not operate a server and does not collect your shop data, most processing happens on your own device under your control. Where we do process personal data (for example, when you email us for support), we do so to respond to your request, with your consent, or for our legitimate interest in providing support and operating the app.</p>
+      <p>We aim to comply with applicable Chilean data-protection law, including <strong>Law No. 19.628</strong> on the protection of private life and, when it enters into force, <strong>Law No. 21.719</strong> on the protection of personal data.</p>
+
+      <h3>Your rights</h3>
+      <p>Subject to applicable law, you may have the right to:</p>
+      <ul>
+        <li><strong>access</strong> the personal data we hold about you;</li>
+        <li><strong>rectify</strong> inaccurate or incomplete data;</li>
+        <li><strong>delete</strong> or cancel data;</li>
+        <li><strong>object to</strong> or restrict certain processing;</li>
+        <li><strong>request portability</strong> of data you provided;</li>
+        <li><strong>withdraw consent</strong> where processing is based on consent;</li>
+        <li><strong>lodge a complaint</strong> with the competent Chilean data-protection authority.</li>
+      </ul>
+      <p>For data stored only on your device, you can exercise access and deletion directly through the app and Android settings. For anything you sent to us by email, contact <a href="mailto:krisoll@gmail.com">krisoll@gmail.com</a> and we will help. We may need to verify your identity before acting on a request. We aim to respond within 30 days, unless the law requires a different period.</p>
+      <p>We do not make automated decisions with legal or similarly significant effects about you, and we do not use your data for profiling or targeted advertising.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-10">10. Retention</h2>
+      <p>Shop data remains on your device until you delete it, clear the app's storage, or uninstall the app. Backup files and CSV/Excel exports remain wherever you saved them until you delete them. Android system backups follow your device's backup settings and Google's retention rules.</p>
+      <p>If you email us, we keep the message and your email address only as long as needed to respond and to keep a record of the request, unless a longer period is required or permitted by law.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-11">11. Security</h2>
+      <p>CrummyStock relies on Android's app sandbox to keep its private data separate from other apps. The security of that data also depends on your device: use a screen lock, keep Android updated, and avoid installing apps from untrusted sources.</p>
+      <p>Backups are not encrypted by the app. Treat every backup and export as sensitive. Use a secure location, restrict access, and delete copies you no longer need. For local Wi-Fi transfers, use a trusted network and close the transfer screen when you are done.</p>
+      <p>No method of storage or transmission is completely secure. We cannot guarantee absolute security, especially for files you copy, share, or store outside the app.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-12">12. Children</h2>
+      <p>CrummyStock is a business tool for shop management and is not directed at children. We do not knowingly collect personal data from children. Because the app does not require an account and does not send shop data to us, we do not knowingly maintain personal data about children on our systems. If you believe a child has sent personal data to us, contact us and we will delete it.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-13">13. International transfers</h2>
+      <p>We do not transfer your shop data internationally because we do not receive it. If you email us, your message may be processed by email providers in other countries under their own safeguards. Google's services (Play, ML Kit, and Android backup) may process data in other countries under Google's policies.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-14">14. Your choices and deleting data</h2>
+      <ul>
+        <li><strong>Delete all app data:</strong> Android Settings → Apps → CrummyStock → Storage → Clear data. This removes the app's local database, photos, and settings.</li>
+        <li><strong>Uninstall the app:</strong> removes the app and its private data from the device, subject to any Android system backup.</li>
+        <li><strong>Delete backups and exports:</strong> delete the files from the folder, cloud drive, or device where you saved them.</li>
+        <li><strong>Revoke permissions:</strong> Android Settings → Apps → CrummyStock → Permissions.</li>
+        <li><strong>Turn off Android backup:</strong> use your device's system backup settings.</li>
+        <li><strong>Stop a transfer:</strong> close the transfer screen; the local server stops.</li>
+        <li><strong>Contact us:</strong> email <a href="mailto:krisoll@gmail.com">krisoll@gmail.com</a> for help with any personal data you sent us directly.</li>
+      </ul>
+      <p>Deleting data from the app does not delete copies you made in backups, exports, emails, or cloud storage. You must delete those separately.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-15">15. Changes to this policy</h2>
+      <p>We may update this policy to reflect changes in the app, the law, or our practices. We will post the new version at this page and update the "Last updated" date. If a change is material, we will provide additional notice in the app or in the store listing where required. The version in effect when you use the app applies to that use.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="en-16">16. Contact</h2>
+      <p><strong>Data controller:</strong> Krisoll, individual developer, Chile.</p>
+      <p><strong>Email:</strong> <a href="mailto:krisoll@gmail.com">krisoll@gmail.com</a></p>
+      <p><strong>App:</strong> CrummyStock for Android (<code>com.krisoll.crummystock</code>)</p>
+      <p><strong>Policy URL:</strong> <a href="https://krisoll.github.io/Crummy-Stock/privacy.html">https://krisoll.github.io/Crummy-Stock/privacy.html</a></p>
+      <p>Please include "Privacy request" in the subject line so we can route your message correctly.</p>
+    </section>
+
+    <a class="back" href="#main">Back to top</a>
+  </article>
+
+  <hr>
+
+  <!-- ============================ SPANISH ============================ -->
+  <article id="spanish" lang="es">
+    <div class="callout">
+      <h2>Resumen breve</h2>
+      <ul>
+        <li><strong>No recopilamos los datos de tu negocio.</strong> Productos, ventas, proveedores, fotos y ajustes se guardan en tu dispositivo Android.</li>
+        <li><strong>No se necesita cuenta.</strong> No hay registro, inicio de sesión, sincronización en la nube ni servidor remoto.</li>
+        <li><strong>Sin publicidad, analítica, rastreo, perfilado ni informes de fallos.</strong> La app no usa identificadores publicitarios.</li>
+        <li><strong>No vendemos ni compartimos datos personales.</strong> No tenemos acceso a los datos de tu dispositivo.</li>
+        <li><strong>Tú decides cuándo salen los datos de la app.</strong> Las copias de seguridad, exportaciones CSV/Excel y transferencias por Wi-Fi local solo ocurren cuando las inicias.</li>
+        <li><strong>Puedes borrar todo</strong> limpiando el almacenamiento de la app o desinstalándola, y borrando los archivos de copia de seguridad que hayas creado.</li>
+      </ul>
+    </div>
+
+    <nav class="toc" aria-label="Contenido">
+      <h2>Contenido</h2>
+      <ol>
+        <li><a href="#es-1">Quiénes somos</a></li>
+        <li><a href="#es-2">Alcance de esta política</a></li>
+        <li><a href="#es-3">Datos guardados en tu dispositivo</a></li>
+        <li><a href="#es-4">Permisos y funciones del dispositivo</a></li>
+        <li><a href="#es-5">Lo que no recopilamos</a></li>
+        <li><a href="#es-6">Cómo pueden salir los datos de la app</a></li>
+        <li><a href="#es-7">Las copias pueden contener datos personales</a></li>
+        <li><a href="#es-8">Componentes de terceros</a></li>
+        <li><a href="#es-9">Bases legales y tus derechos en Chile</a></li>
+        <li><a href="#es-10">Conservación</a></li>
+        <li><a href="#es-11">Seguridad</a></li>
+        <li><a href="#es-12">Menores de edad</a></li>
+        <li><a href="#es-13">Transferencias internacionales</a></li>
+        <li><a href="#es-14">Tus opciones y cómo borrar datos</a></li>
+        <li><a href="#es-15">Cambios a esta política</a></li>
+        <li><a href="#es-16">Contacto</a></li>
+      </ol>
+    </nav>
+
+    <section class="card">
+      <h2 id="es-1">1. Quiénes somos</h2>
+      <p>Esta política de privacidad es emitida por <strong>Krisoll</strong>, desarrollador individual con domicilio en <strong>Chile</strong> ("nosotros" o "nuestro"). Somos el editor de la aplicación Android <strong>CrummyStock</strong> (nombre de paquete <code>com.krisoll.crummystock</code>).</p>
+      <p>Para consultas, solicitudes o reclamos sobre privacidad, escríbenos a <a href="mailto:krisoll@gmail.com">krisoll@gmail.com</a>.</p>
+      <p>Como CrummyStock guarda los datos en tu dispositivo y no opera un servicio en la nube, por lo general no podemos acceder, leer, exportar ni borrar los datos dentro de tu instalación. Aun así, podemos ayudarte con instrucciones y, cuando corresponda, con los datos personales que nos envíes directamente (por ejemplo, un correo de soporte).</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-2">2. Alcance de esta política</h2>
+      <p>Esta política se aplica a la app Android CrummyStock distribuida a través de Google Play y como APK directo, y a las prácticas de privacidad de la propia app. No se aplica a:</p>
+      <ul>
+        <li>Google Play, Android o los servicios y ajustes del fabricante de tu dispositivo;</li>
+        <li>apps o sitios web de terceros que abras desde la app;</li>
+        <li>archivos que crees con otras herramientas después de exportarlos desde CrummyStock.</li>
+      </ul>
+      <p>Esta política está redactada para un público general, incluidos dueños y personal de tiendas. La app es una herramienta de negocio y no está dirigida a menores de edad.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-3">3. Datos guardados en tu dispositivo</h2>
+      <p>CrummyStock guarda la información que ingresas o capturas para que la app funcione. Esta información se mantiene en el almacenamiento privado de la app en tu dispositivo Android. Según cómo uses la app, puede incluir:</p>
+
+      <table>
+        <thead>
+          <tr><th>Categoría</th><th>Ejemplos</th><th>Para qué se guarda</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Inventario</strong></td>
+            <td>Nombres de productos, códigos de barras, precios, cantidades en stock, categorías, etiquetas, fotos de productos.</td>
+            <td>Para mostrar y administrar tu stock, escanear códigos y calcular totales de venta.</td>
+          </tr>
+          <tr>
+            <td><strong>Ventas</strong></td>
+            <td>IDs de pedido, fechas y horas, artículos, cantidades, precios, descuentos, impuestos y comisiones de tarjeta, método de pago, notas del pedido.</td>
+            <td>Para registrar ventas, imprimir o exportar comprobantes y mostrar el historial y los informes.</td>
+          </tr>
+          <tr>
+            <td><strong>Promociones</strong></td>
+            <td>Nombres de promociones, reglas, categorías o productos objetivo, umbrales, valores de descuento, horarios, estado activado/desactivado.</td>
+            <td>Para aplicar descuentos en el carrito y administrar promociones.</td>
+          </tr>
+          <tr>
+            <td><strong>Insumos</strong></td>
+            <td>Nombres de proveedores, teléfonos, direcciones, notas; materiales, unidades, stock, entradas de compra, costos, referencias.</td>
+            <td>Para llevar proveedores, materiales, compras y stock.</td>
+          </tr>
+          <tr>
+            <td><strong>Ajustes</strong></td>
+            <td>Idioma, moneda, tema y colores, fuente y tamaño de texto, pantalla de inicio, sonidos del escáner, tasas de impuestos, comisiones de tarjeta, preferencias de copia de seguridad.</td>
+            <td>Para recordar cómo configuraste la app.</td>
+          </tr>
+          <tr>
+            <td><strong>Copias y exportaciones</strong></td>
+            <td>Archivos ZIP de copia de seguridad con los datos anteriores e imágenes; informes de ventas en CSV o Excel.</td>
+            <td>Para que puedas guardar, mover o restaurar tus propios datos.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Algunos campos de texto libre (por ejemplo, notas de proveedores, notas de pedidos, descripciones de productos o nombres que escribas) podrían contener datos personales de otras personas. Tú controlas lo que ingresas. Solo debes ingresar información que estés autorizado a usar y conservar.</p>
+      <p>La app no requiere tu nombre, correo electrónico, teléfono, dirección postal, ubicación precisa, contactos, audio del micrófono, SMS, registros de llamadas, datos de salud ni identificadores gubernamentales. No solicita una cuenta.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-4">4. Permisos y funciones del dispositivo</h2>
+      <p>CrummyStock solicita solo los permisos de Android necesarios para las funciones que eliges usar:</p>
+
+      <h3>Cámara</h3>
+      <p>Se usa para escanear códigos de barras y tomar fotos de productos o de la pantalla de inicio. Los fotogramas del escaneo se procesan en el dispositivo para leer el código; no se suben a nosotros ni a un servidor. Las fotos que tomas se guardan en el almacenamiento privado de la app y pueden incluirse en una copia de seguridad si creas una. Puedes negar el permiso de cámara y seguir usando el ingreso manual de productos y ventas.</p>
+
+      <h3>Vibración</h3>
+      <p>Se usa para una respuesta háptica opcional al escanear. Es un permiso normal de Android y no accede a datos personales.</p>
+
+      <h3>Internet, estado de red y red local</h3>
+      <p>Se usan solo para la función opcional de transferencia de copias de seguridad, que permite enviar o recibir una copia entre CrummyStock en tu teléfono y otro dispositivo en la <strong>misma red Wi-Fi local</strong>. La app no se conecta a un servidor remoto de CrummyStock, no sube tus datos a nosotros y no ejecuta un servidor en segundo plano. En versiones nuevas de Android, la app también solicita el permiso de red local al abrir la pantalla de transferencia. Puedes negarlo y seguir usando el resto de la app.</p>
+
+      <p>La app no solicita acceso amplio a tus archivos, contactos, ubicación, micrófono, SMS ni registros de llamadas. Cuando exportas o importas un archivo, el selector de archivos de Android te permite elegir la ubicación y otorga acceso solo al archivo que seleccionaste.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-5">5. Lo que no recopilamos</h2>
+      <p>No recopilamos, no transmitimos a nosotros ni mantenemos en un servidor:</p>
+      <ul>
+        <li>tu inventario, ventas, proveedores, materiales, promociones, notas o fotos;</li>
+        <li>tu nombre, correo electrónico, teléfono o dirección postal (salvo que nos los envíes en un mensaje de soporte);</li>
+        <li>tu ubicación precisa o aproximada;</li>
+        <li>tus contactos, calendario, SMS, registros de llamadas o audio del micrófono;</li>
+        <li>identificadores publicitarios o datos de rastreo entre apps;</li>
+        <li>analítica, perfiles de comportamiento o informes de fallos.</li>
+      </ul>
+      <p>La app no contiene SDK de publicidad, analítica, informes de fallos ni redes sociales. No vendemos datos personales ni los compartimos para publicidad conductual entre contextos.</p>
+      <p class="note">Si nos envías un correo, recibimos tu dirección de correo y lo que incluyas en el mensaje. Lo usamos solo para responderte y gestionar tu solicitud, y lo conservamos solo el tiempo necesario para ese fin o según lo exija la ley.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-6">6. Cómo pueden salir los datos de la app</h2>
+      <p>Los datos salen de la app solo cuando realizas una acción que tú eliges:</p>
+
+      <h3>Exportación de copia de seguridad</h3>
+      <p>Puedes exportar un archivo ZIP de copia de seguridad con los datos de tu negocio e imágenes. El archivo se guarda donde tú elijas mediante el selector de archivos de Android. Luego puedes almacenarlo, copiarlo o compartirlo con otras apps. Una vez que una copia sale de CrummyStock, su protección depende de dónde la guardes y de quién pueda acceder a ella.</p>
+
+      <h3>Informes CSV y Excel</h3>
+      <p>Puedes exportar informes de ventas en CSV o Excel. Contienen información de ventas y se guardan donde tú elijas. No se suben a nosotros.</p>
+
+      <h3>Transferencia por Wi-Fi local</h3>
+      <p>La función de transferencia envía una copia directamente entre dos dispositivos en la misma red local. Los datos no pasan por nuestros servidores. El dispositivo receptor y la red los eliges tú, así que debes usar una red de confianza y confirmar que el dispositivo receptor es el correcto. El servidor de transferencia está activo solo mientras la pantalla de transferencia está abierta.</p>
+
+      <h3>Copia de seguridad del sistema Android</h3>
+      <p>Android puede incluir los datos de la app en la copia de seguridad del dispositivo si tienes activada esa función en los ajustes. Esa copia la controlan Google y el fabricante de tu dispositivo bajo sus propios términos y políticas de privacidad, no nosotros. Puedes desactivarla en los ajustes de Android.</p>
+
+      <h3>Soporte por correo</h3>
+      <p>Si nos contactas, tu proveedor de correo y el nuestro procesan el mensaje. No adjuntamos los datos de tu negocio salvo que tú decidas enviarlos.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-7">7. Las copias pueden contener datos personales</h2>
+      <div class="warn">
+        <p><strong>Importante:</strong> los archivos de copia de seguridad de CrummyStock son archivos ZIP comunes. La app no les agrega contraseña ni cifrado. Cualquier persona que obtenga una copia podría leer los datos del negocio, las imágenes, los datos de proveedores, las notas y los registros de ventas que contiene.</p>
+      </div>
+      <p>Las copias pueden incluir nombres de proveedores, teléfonos, direcciones, notas y otra información de texto libre sobre personas. Si exportas, copias, subes, envías por correo o transfieres una copia, eres responsable de:</p>
+      <ul>
+        <li>mantener el archivo en un lugar seguro;</li>
+        <li>compartirlo solo con personas autorizadas para recibirlo;</li>
+        <li>borrar las copias que ya no necesites;</li>
+        <li>cumplir las obligaciones de protección de datos y confidencialidad que se apliquen a tu negocio.</li>
+      </ul>
+      <p>Si necesitas copias cifradas, cifra el archivo ZIP con una herramienta confiable antes de guardarlo o compartirlo, y mantén la contraseña por separado.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-8">8. Componentes de terceros</h2>
+      <p>CrummyStock usa un pequeño número de componentes de terceros. Ninguno se usa por nuestra parte para recopilar los datos de tu negocio.</p>
+
+      <h3>Google ML Kit Barcode Scanning</h3>
+      <p>El escáner de códigos de barras usa Google ML Kit. El escaneo está diseñado para ejecutarse en el dispositivo. CrummyStock no envía tus imágenes de cámara ni los códigos escaneados a nosotros ni a Google. Google podría recopilar información técnica o de uso limitada a través de su SDK, según sus propios términos y política de privacidad. Consulta los <a href="https://developers.google.com/ml-kit/terms" rel="noopener noreferrer">Términos de ML Kit</a> y la <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Política de Privacidad de Google</a>.</p>
+
+      <h3>Google Play y Android</h3>
+      <p>Si instalas CrummyStock desde Google Play, Google podría recopilar información sobre la instalación, las actualizaciones, el dispositivo y el uso de la app como parte de sus servicios de tienda. Si usas la copia de seguridad del sistema Android, Google o el fabricante de tu dispositivo podrían procesar datos de la app bajo su propia política. No controlamos esos servicios. Consulta la <a href="https://policies.google.com/privacy" rel="noopener noreferrer">Política de Privacidad de Google</a>.</p>
+
+      <h3>Bibliotecas locales</h3>
+      <p>La app también usa bibliotecas de código abierto para la base de datos, la carga de imágenes, la animación y la interfaz. Estas bibliotecas se ejecutan localmente y no envían tus datos a nosotros.</p>
+
+      <p>No usamos redes publicitarias, proveedores de analítica, servicios de informes de fallos, corredores de datos ni SDK de rastreo de redes sociales.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-9">9. Bases legales y tus derechos en Chile</h2>
+      <p>Como CrummyStock no opera un servidor y no recopila los datos de tu negocio, la mayor parte del tratamiento ocurre en tu propio dispositivo bajo tu control. Cuando tratamos datos personales (por ejemplo, si nos escribes para soporte), lo hacemos para responder tu solicitud, con tu consentimiento o por nuestro interés legítimo en entregar soporte y operar la app.</p>
+      <p>Buscamos cumplir la legislación chilena aplicable de protección de datos, incluida la <strong>Ley N.º 19.628</strong> sobre protección de la vida privada y, cuando entre en vigencia, la <strong>Ley N.º 21.719</strong> sobre protección de datos personales.</p>
+
+      <h3>Tus derechos</h3>
+      <p>Según la ley aplicable, puedes tener derecho a:</p>
+      <ul>
+        <li><strong>acceder</strong> a los datos personales que tengamos sobre ti;</li>
+        <li><strong>rectificar</strong> datos inexactos o incompletos;</li>
+        <li><strong>eliminar</strong> o cancelar datos;</li>
+        <li><strong>oponerte</strong> a cierto tratamiento o restringirlo;</li>
+        <li><strong>solicitar la portabilidad</strong> de los datos que proporcionaste;</li>
+        <li><strong>retirar el consentimiento</strong> cuando el tratamiento se base en él;</li>
+        <li><strong>presentar un reclamo</strong> ante la autoridad chilena competente en protección de datos.</li>
+      </ul>
+      <p>Para los datos guardados solo en tu dispositivo, puedes ejercer el acceso y la eliminación directamente en la app y en los ajustes de Android. Para cualquier dato que nos hayas enviado por correo, escribe a <a href="mailto:krisoll@gmail.com">krisoll@gmail.com</a> y te ayudaremos. Podríamos necesitar verificar tu identidad antes de actuar. Buscamos responder dentro de 30 días, salvo que la ley exija otro plazo.</p>
+      <p>No tomamos decisiones automatizadas con efectos legales o de importancia similar sobre ti, y no usamos tus datos para perfilado ni publicidad dirigida.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-10">10. Conservación</h2>
+      <p>Los datos del negocio permanecen en tu dispositivo hasta que los borres, limpies el almacenamiento de la app o desinstales la app. Las copias de seguridad y exportaciones CSV/Excel permanecen donde las guardaste hasta que las borres. Las copias del sistema Android siguen los ajustes de respaldo de tu dispositivo y las reglas de conservación de Google.</p>
+      <p>Si nos envías un correo, conservamos el mensaje y tu dirección solo el tiempo necesario para responder y mantener registro de la solicitud, salvo que la ley exija o permita un plazo mayor.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-11">11. Seguridad</h2>
+      <p>CrummyStock se apoya en el aislamiento de apps de Android para mantener sus datos privados separados de otras apps. La seguridad de esos datos también depende de tu dispositivo: usa bloqueo de pantalla, mantén Android actualizado y evita instalar apps de fuentes no confiables.</p>
+      <p>Las copias de seguridad no están cifradas por la app. Trata cada copia y exportación como información sensible. Usa un lugar seguro, restringe el acceso y borra las copias que ya no necesites. Para transferencias por Wi-Fi local, usa una red de confianza y cierra la pantalla de transferencia cuando termines.</p>
+      <p>Ningún método de almacenamiento o transmisión es completamente seguro. No podemos garantizar seguridad absoluta, especialmente para archivos que copies, compartas o guardes fuera de la app.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-12">12. Menores de edad</h2>
+      <p>CrummyStock es una herramienta de negocio para la gestión de tiendas y no está dirigida a menores de edad. No recopilamos a sabiendas datos personales de menores. Como la app no requiere cuenta y no envía los datos del negocio a nosotros, no mantenemos a sabiendas datos personales de menores en nuestros sistemas. Si crees que un menor nos envió datos personales, contáctanos y los borraremos.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-13">13. Transferencias internacionales</h2>
+      <p>No transferimos los datos de tu negocio internacionalmente porque no los recibimos. Si nos envías un correo, tu mensaje podría ser procesado por proveedores de correo en otros países bajo sus propias garantías. Los servicios de Google (Play, ML Kit y copia de seguridad de Android) podrían procesar datos en otros países bajo las políticas de Google.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-14">14. Tus opciones y cómo borrar datos</h2>
+      <ul>
+        <li><strong>Borrar todos los datos de la app:</strong> Ajustes de Android → Apps → CrummyStock → Almacenamiento → Borrar datos. Esto elimina la base de datos local, las fotos y los ajustes.</li>
+        <li><strong>Desinstalar la app:</strong> elimina la app y sus datos privados del dispositivo, salvo la copia de seguridad del sistema Android.</li>
+        <li><strong>Borrar copias y exportaciones:</strong> elimina los archivos de la carpeta, unidad en la nube o dispositivo donde los guardaste.</li>
+        <li><strong>Revocar permisos:</strong> Ajustes de Android → Apps → CrummyStock → Permisos.</li>
+        <li><strong>Desactivar la copia de seguridad de Android:</strong> usa los ajustes de respaldo del sistema.</li>
+        <li><strong>Detener una transferencia:</strong> cierra la pantalla de transferencia; el servidor local se detiene.</li>
+        <li><strong>Contactarnos:</strong> escribe a <a href="mailto:krisoll@gmail.com">krisoll@gmail.com</a> para ayuda con cualquier dato personal que nos hayas enviado directamente.</li>
+      </ul>
+      <p>Borrar datos de la app no borra las copias que hiciste en archivos de respaldo, exportaciones, correos o almacenamiento en la nube. Debes borrarlas por separado.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-15">15. Cambios a esta política</h2>
+      <p>Podemos actualizar esta política para reflejar cambios en la app, la ley o nuestras prácticas. Publicaremos la nueva versión en esta página y actualizaremos la fecha de "Última actualización". Si el cambio es importante, entregaremos aviso adicional en la app o en la ficha de la tienda cuando corresponda. La versión vigente al momento de usar la app se aplica a ese uso.</p>
+    </section>
+
+    <section class="card">
+      <h2 id="es-16">16. Contacto</h2>
+      <p><strong>Responsable del tratamiento:</strong> Krisoll, desarrollador individual, Chile.</p>
+      <p><strong>Correo:</strong> <a href="mailto:krisoll@gmail.com">krisoll@gmail.com</a></p>
+      <p><strong>App:</strong> CrummyStock para Android (<code>com.krisoll.crummystock</code>)</p>
+      <p><strong>URL de la política:</strong> <a href="https://krisoll.github.io/Crummy-Stock/privacy.html">https://krisoll.github.io/Crummy-Stock/privacy.html</a></p>
+      <p>Incluye "Solicitud de privacidad" en el asunto para que podamos derivar tu mensaje correctamente.</p>
+    </section>
+
+    <p class="note" lang="es">La versión en español es la versión oficial para usuarios en Chile. La versión en inglés se entrega como traducción de cortesía. Si existe alguna discrepancia, prevalece la versión en español para esos usuarios.</p>
+
+    <a class="back" href="#main">Volver arriba</a>
+  </article>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong>CrummyStock</strong> · Privacy Policy / Política de Privacidad · Effective November 7, 2026 · Version 1.0</p>
+    <p class="note">This page is self-contained and uses no cookies, analytics, external fonts, or third-party scripts.</p>
+  </div>
+</footer>
+</body>
+</html>

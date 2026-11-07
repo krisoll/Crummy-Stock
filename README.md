@@ -170,6 +170,10 @@ Two things worth knowing before changing anything:
 
 Crummy Stock Android is designed as a companion to the Crummy Stock Desktop app.
 
+## Privacy
+
+Crummy Stock Android is local-first: there are no accounts, no backend, no analytics, and no crash reporting. Read the [Privacy Policy](https://krisoll.github.io/Crummy-Stock/privacy.html) for details on what the app stores, the permissions it uses, how backups are handled, and your rights.
+
 ## License
 
 Crummy Stock Android is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. See [LICENSE](LICENSE) for the full text.
