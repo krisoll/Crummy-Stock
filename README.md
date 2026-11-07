@@ -8,6 +8,10 @@
 
 # Crummy Stock — Android
 
+[![CI](https://github.com/krisoll/Crummy-Stock/actions/workflows/ci.yml/badge.svg)](https://github.com/krisoll/Crummy-Stock/actions/workflows/ci.yml)
+[![Latest release](https://img.shields.io/github/v/release/krisoll/Crummy-Stock)](https://github.com/krisoll/Crummy-Stock/releases/latest)
+[![Licence: AGPL v3](https://img.shields.io/badge/licence-AGPL--3.0-blue)](LICENSE)
+
 An offline-first stock and sales tracker for a small shop, built with Jetpack Compose.
 
 Everything lives on the device. There is no account, no backend, no analytics and no crash reporting — the only network traffic the app can produce is an explicitly-started backup transfer between two devices on the same Wi-Fi.

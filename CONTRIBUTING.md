@@ -41,6 +41,28 @@ to it alongside a change rather than after.
 
 Unit tests run on Robolectric, so they execute on the JVM without a device.
 
+## Continuous integration
+
+Every push to `main` and every pull request runs [`.github/workflows/ci.yml`](.github/workflows/ci.yml).
+Three jobs run in parallel on Ubuntu with JDK 25:
+
+| Job | Command | Blocks merge? |
+|---|---|---|
+| Unit tests | `./gradlew :app:testDebugUnitTest` | Yes |
+| Assemble | `./gradlew :app:assembleDebug` | Yes |
+| Lint | `./gradlew :app:lintDebug` | No, currently advisory |
+
+Lint is deliberately non-blocking while the pre-existing warnings are worked
+through — it uploads a report so new warnings are visible, without failing a
+pull request on debt that was already there. That should be flipped to blocking
+once the baseline is clean.
+
+Failing runs upload the HTML test report and the raw XML results as artifacts,
+so you can see which assertions broke without reproducing locally.
+
+If CI fails and it is not obvious why, reproduce with the same JDK version —
+most "works on my machine" failures here are a stale JDK or daemon.
+
 ## Style
 
 - Kotlin, official code style (`kotlin.code.style=official`, enforced by
