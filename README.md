@@ -1,4 +1,7 @@
-**Support me on Ko-fi:** [![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/krisoll) **Follow me on Socials:** [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/krisoll/) [![Twitter](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/krisoll) **Try it on desktop:** [krisoll.github.io/Crummy-Stock-Web](https://krisoll.github.io/Crummy-Stock-Web/) **Join the community:** [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/schG4aJ24T)
+**Support me on Ko-fi:** [![Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/krisoll) 
+**Follow me on Socials:** [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/krisoll/) [![Twitter](https://img.shields.io/badge/Twitter-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/krisoll) 
+*Try it on desktop with the companion:** [krisoll.github.io/Crummy-Stock-Web](https://krisoll.github.io/Crummy-Stock-Web/) 
+**Join the community:** [![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/schG4aJ24T)
 
 # Crummy Stock — Android
 
